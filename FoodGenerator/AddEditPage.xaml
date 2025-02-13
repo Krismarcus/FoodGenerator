@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodGenerator.AddEditPage"
+             Title="AddEditPage">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <!-- Food Name -->
+            <Entry Placeholder="Food Name" Text="{Binding Name}" />
+
+            <!-- Fats -->
+            <Frame Padding="10" Margin="0,10">
+                <VerticalStackLayout>
+                    <Label Text="Fats" FontSize="16" FontAttributes="Bold" />
+                    <Entry Placeholder="Total Fats (g)" Keyboard="Numeric" Text="{Binding Fats.Total, StringFormat='{0:F2}'}" />
+                    <Entry Placeholder="Omega 3 (g)" Keyboard="Numeric" Text="{Binding Fats.Omega3, StringFormat='{0:F2}'}" />
+                    <Entry Placeholder="Omega 6 (g)" Keyboard="Numeric" Text="{Binding Fats.Omega6, StringFormat='{0:F2}'}" />
+                    <Entry Placeholder="Trans Fat (g)" Keyboard="Numeric" Text="{Binding Fats.TransFat, StringFormat='{0:F2}'}" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Proteins -->
+            <Frame Padding="10" Margin="0,10">
+                <VerticalStackLayout>
+                    <Label Text="Proteins" FontSize="16" FontAttributes="Bold" />
+                    <Entry Placeholder="Total Protein (g)" Keyboard="Numeric" Text="{Binding Proteins.Total, StringFormat='{0:F2}'}" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Carbohydrates -->
+            <Frame Padding="10" Margin="0,10">
+                <VerticalStackLayout>
+                    <Label Text="Carbohydrates" FontSize="16" FontAttributes="Bold" />
+                    <Entry Placeholder="Total Carbohydrates (g)" Keyboard="Numeric" Text="{Binding Carbohydrates.Total, StringFormat='{0:F2}'}" />
+                    <Entry Placeholder="Fiber (g)" Keyboard="Numeric" Text="{Binding Carbohydrates.Fiber, StringFormat='{0:F2}'}" />
+                    <Entry Placeholder="Sugar (g)" Keyboard="Numeric" Text="{Binding Carbohydrates.Sugar, StringFormat='{0:F2}'}" />
+                    <Entry Placeholder="Complex Carbs (g)" Keyboard="Numeric" Text="{Binding Carbohydrates.ComplexCarbs, StringFormat='{0:F2}'}" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Save Button -->
+            <Button Text="Save" Clicked="OnSaveClicked" Margin="0,20" BackgroundColor="Blue" TextColor="White" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
