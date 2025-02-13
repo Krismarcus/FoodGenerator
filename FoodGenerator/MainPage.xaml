@@ -129,14 +129,10 @@
                                        Padding="15">
                                         <VerticalStackLayout Spacing="8">
                                             <HorizontalStackLayout Spacing="8">
-                                                <Label Text="🥑" FontSize="24"/>
-                                                <Label Text="Fats" 
-                                                   FontSize="18"
-                                                   FontAttributes="Bold"
-                                                   TextColor="White"/>
+                                                <Label Text="🥑" FontSize="24"/>                                                
                                             </HorizontalStackLayout>
                                             <Label Text="{Binding Fats.Total, StringFormat='{0:F2}g'}" 
-                                               FontSize="16"
+                                               FontSize="12"
                                                TextColor="White"
                                                FontAttributes="Bold"/>
                                         </VerticalStackLayout>
@@ -149,14 +145,10 @@
                                        Padding="15">
                                         <VerticalStackLayout Spacing="8">
                                             <HorizontalStackLayout Spacing="8">
-                                                <Label Text="🍗" FontSize="24"/>
-                                                <Label Text="Protein" 
-                                                   FontSize="18"
-                                                   FontAttributes="Bold"
-                                                   TextColor="White"/>
+                                                <Label Text="🍗" FontSize="24"/>                                                
                                             </HorizontalStackLayout>
                                             <Label Text="{Binding Proteins.Total, StringFormat='{0:F2}g'}" 
-                                               FontSize="24"
+                                               FontSize="12"
                                                TextColor="White"
                                                FontAttributes="Bold"/>
                                         </VerticalStackLayout>
@@ -169,14 +161,10 @@
                                        Padding="15">
                                         <VerticalStackLayout Spacing="8">
                                             <HorizontalStackLayout Spacing="8">
-                                                <Label Text="🍞" FontSize="24"/>
-                                                <Label Text="Carbs" 
-                                                   FontSize="18"
-                                                   FontAttributes="Bold"
-                                                   TextColor="White"/>
+                                                <Label Text="🍞" FontSize="24"/>                                                
                                             </HorizontalStackLayout>
                                             <Label Text="{Binding Carbohydrates.Total, StringFormat='{0:F2}g'}" 
-                                               FontSize="24"
+                                               FontSize="12"
                                                TextColor="White"
                                                FontAttributes="Bold"/>
                                         </VerticalStackLayout>
