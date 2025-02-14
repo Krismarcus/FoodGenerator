@@ -4,7 +4,6 @@ using Microcharts;
 using NutritionApp.Data.Data;
 using NutritionApp.Data.Models;
 using System.Collections.ObjectModel;
-using SkiaSharp;
 
 namespace FoodGenerator
 {

@@ -69,7 +69,7 @@
                        CornerRadius="24"
                        HasShadow="True"
                        BackgroundColor="Transparent"
-                       WidthRequest="300">
+                       WidthRequest="220">
                         <!-- Set the desired width for each frame -->
                         <Frame CornerRadius="24"
                            BackgroundColor="White"
@@ -89,7 +89,7 @@
                                 </Grid.RowDefinitions>
 
                                 <!-- Header -->
-                                <Grid Grid.Row="0" ColumnDefinitions="*,*,*">
+                                <Grid Grid.Row="0" ColumnDefinitions="*,*,*" >
                                 
                                 <microcharts:ChartView Grid.Row="0" HeightRequest="100" 
                               WidthRequest="100"
@@ -113,8 +113,8 @@
                                               BackgroundColor="#FF4757"
                                               HorizontalOptions="End"
                                               VerticalOptions="Start"
-                                              WidthRequest="32"
-                                              HeightRequest="32"
+                                              WidthRequest="12"
+                                              HeightRequest="12"
                                               CornerRadius="16"
                                               Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MainViewModel}}, Path=DeleteFoodCommand}"
                                               CommandParameter="{Binding .}"/>
@@ -125,14 +125,15 @@
                                   ColumnSpacing="15">
                                     <!-- Fats Block -->
                                     <Frame CornerRadius="16"
+                                       HorizontalOptions="Center"
                                        BackgroundColor="#FF9F43"
-                                       Padding="15">
+                                       Padding="10">
                                         <VerticalStackLayout Spacing="8">
                                             <HorizontalStackLayout Spacing="8">
-                                                <Label Text="🥑" FontSize="24"/>                                                
+                                                <Label Text="🥑" FontSize="20"/>                                                
                                             </HorizontalStackLayout>
                                             <Label Text="{Binding Fats.Total, StringFormat='{0:F2}g'}" 
-                                               FontSize="12"
+                                               FontSize="10"
                                                TextColor="White"
                                                FontAttributes="Bold"/>
                                         </VerticalStackLayout>
@@ -140,15 +141,16 @@
 
                                     <!-- Proteins Block -->
                                     <Frame Grid.Column="1"
+                                       HorizontalOptions="Center"
                                        CornerRadius="16"
                                        BackgroundColor="#6C5CE7"
-                                       Padding="15">
+                                       Padding="10">
                                         <VerticalStackLayout Spacing="8">
                                             <HorizontalStackLayout Spacing="8">
-                                                <Label Text="🍗" FontSize="24"/>                                                
+                                                <Label Text="🍗" FontSize="20"/>                                                
                                             </HorizontalStackLayout>
                                             <Label Text="{Binding Proteins.Total, StringFormat='{0:F2}g'}" 
-                                               FontSize="12"
+                                               FontSize="10"
                                                TextColor="White"
                                                FontAttributes="Bold"/>
                                         </VerticalStackLayout>
@@ -156,15 +158,16 @@
 
                                     <!-- Carbs Block -->
                                     <Frame Grid.Column="2"
+                                       HorizontalOptions="Center"
                                        CornerRadius="16"
                                        BackgroundColor="#00B894"
-                                       Padding="15">
+                                       Padding="10">
                                         <VerticalStackLayout Spacing="8">
                                             <HorizontalStackLayout Spacing="8">
-                                                <Label Text="🍞" FontSize="24"/>                                                
+                                                <Label Text="🍞" FontSize="20"/>                                                
                                             </HorizontalStackLayout>
                                             <Label Text="{Binding Carbohydrates.Total, StringFormat='{0:F2}g'}" 
-                                               FontSize="12"
+                                               FontSize="10"
                                                TextColor="White"
                                                FontAttributes="Bold"/>
                                         </VerticalStackLayout>
