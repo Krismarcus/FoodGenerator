@@ -1,3368 +1,2202 @@
 [
     {
-        "Id": 460,
+        "Id": 1,
         "Name": "Apple",
-        "Calories": 306.2,
+        "Calories": 521.79,
         "Weight": 100.0,
         "Fats": {
-            "Total": 0.26,
-            "Omega3": 0.0,
-            "Omega6": 0.01,
-            "TransFat": 0.04
+            "Total": 1.21,
+            "Omega3": 0.07,
+            "Omega6": 0.1,
+            "TransFat": 0.09
         },
         "Proteins": {
-            "Total": 2.28,
+            "Total": 2.13,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 19.56,
-            "Fiber": 0.11,
-            "Sugar": 0.92,
-            "ComplexCarbs": 18.53
+            "Total": 7.53,
+            "Fiber": 0.4,
+            "Sugar": 0.88,
+            "ComplexCarbs": 6.25
         }
     },
     {
-        "Id": 461,
+        "Id": 2,
         "Name": "Banana",
-        "Calories": 228.76,
+        "Calories": 192.32,
         "Weight": 100.0,
         "Fats": {
-            "Total": 1.49,
-            "Omega3": 0.29,
-            "Omega6": 0.23,
-            "TransFat": 0.07
+            "Total": 1.25,
+            "Omega3": 0.23,
+            "Omega6": 0.26,
+            "TransFat": 0.09
         },
         "Proteins": {
-            "Total": 2.14,
+            "Total": 1.02,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 8.81,
-            "Fiber": 2.78,
-            "Sugar": 2.06,
-            "ComplexCarbs": 3.97
+            "Total": 16.32,
+            "Fiber": 1.68,
+            "Sugar": 3.82,
+            "ComplexCarbs": 10.82
         }
     },
     {
-        "Id": 462,
+        "Id": 3,
         "Name": "Carrot",
-        "Calories": 305.37,
+        "Calories": 340.27,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.35,
+            "Omega3": 0.02,
+            "Omega6": 0.05,
+            "TransFat": 0.03
+        },
+        "Proteins": {
+            "Total": 1.41,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 7.96,
+            "Fiber": 0.53,
+            "Sugar": 1.93,
+            "ComplexCarbs": 5.5
+        }
+    },
+    {
+        "Id": 4,
+        "Name": "Chicken Breast",
+        "Calories": 381.52,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 33.03,
+            "Omega3": 1.66,
+            "Omega6": 5.33,
+            "TransFat": 0.49
+        },
+        "Proteins": {
+            "Total": 18.63,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 0.15,
+            "Fiber": 0.0,
+            "Sugar": 0.04,
+            "ComplexCarbs": 0.11
+        }
+    },
+    {
+        "Id": 5,
+        "Name": "Salmon",
+        "Calories": 536.58,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 5.45,
+            "Omega3": 0.95,
+            "Omega6": 0.28,
+            "TransFat": 0.3
+        },
+        "Proteins": {
+            "Total": 17.51,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 1.81,
+            "Fiber": 0.15,
+            "Sugar": 0.67,
+            "ComplexCarbs": 0.99
+        }
+    },
+    {
+        "Id": 6,
+        "Name": "Almonds",
+        "Calories": 426.64,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 55.01,
+            "Omega3": 2.55,
+            "Omega6": 8.6,
+            "TransFat": 3.44
+        },
+        "Proteins": {
+            "Total": 28.18,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 11.82,
+            "Fiber": 3.4,
+            "Sugar": 3.55,
+            "ComplexCarbs": 4.87
+        }
+    },
+    {
+        "Id": 7,
+        "Name": "Broccoli",
+        "Calories": 373.69,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.4,
+            "Omega3": 0.04,
+            "Omega6": 0.0,
+            "TransFat": 0.03
+        },
+        "Proteins": {
+            "Total": 1.35,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 11.2,
+            "Fiber": 5.04,
+            "Sugar": 0.94,
+            "ComplexCarbs": 5.22
+        }
+    },
+    {
+        "Id": 8,
+        "Name": "Eggs",
+        "Calories": 383.58,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.9,
+            "Omega3": 0.18,
+            "Omega6": 0.24,
+            "TransFat": 0.03
+        },
+        "Proteins": {
+            "Total": 3.89,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 10.43,
+            "Fiber": 3.79,
+            "Sugar": 2.76,
+            "ComplexCarbs": 3.88
+        }
+    },
+    {
+        "Id": 9,
+        "Name": "Milk",
+        "Calories": 20.36,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 15.03,
+            "Omega3": 1.8,
+            "Omega6": 3.93,
+            "TransFat": 0.7
+        },
+        "Proteins": {
+            "Total": 12.06,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 7.23,
+            "Fiber": 3.36,
+            "Sugar": 2.15,
+            "ComplexCarbs": 1.72
+        }
+    },
+    {
+        "Id": 10,
+        "Name": "Cheese",
+        "Calories": 16.52,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 9.31,
+            "Omega3": 0.24,
+            "Omega6": 1.98,
+            "TransFat": 0.43
+        },
+        "Proteins": {
+            "Total": 6.42,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 5.48,
+            "Fiber": 2.26,
+            "Sugar": 0.33,
+            "ComplexCarbs": 2.89
+        }
+    },
+    {
+        "Id": 11,
+        "Name": "Lentils",
+        "Calories": 132.48,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 3.4,
+            "Omega3": 0.39,
+            "Omega6": 1.24,
+            "TransFat": 0.24
+        },
+        "Proteins": {
+            "Total": 15.85,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 47.17,
+            "Fiber": 5.63,
+            "Sugar": 13.2,
+            "ComplexCarbs": 28.34
+        }
+    },
+    {
+        "Id": 12,
+        "Name": "Rice",
+        "Calories": 285.35,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 6.3,
+            "Omega3": 1.05,
+            "Omega6": 0.32,
+            "TransFat": 0.57
+        },
+        "Proteins": {
+            "Total": 9.24,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 64.79,
+            "Fiber": 31.79,
+            "Sugar": 8.21,
+            "ComplexCarbs": 24.79
+        }
+    },
+    {
+        "Id": 13,
+        "Name": "Oats",
+        "Calories": 583.96,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 5.53,
+            "Omega3": 0.94,
+            "Omega6": 0.11,
+            "TransFat": 0.37
+        },
+        "Proteins": {
+            "Total": 12.18,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 67.38,
+            "Fiber": 30.21,
+            "Sugar": 20.84,
+            "ComplexCarbs": 16.33
+        }
+    },
+    {
+        "Id": 14,
+        "Name": "Beef",
+        "Calories": 509.62,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 21.41,
+            "Omega3": 3.86,
+            "Omega6": 4.16,
+            "TransFat": 0.26
+        },
+        "Proteins": {
+            "Total": 22.61,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 1.95,
+            "Fiber": 0.45,
+            "Sugar": 0.63,
+            "ComplexCarbs": 0.87
+        }
+    },
+    {
+        "Id": 15,
+        "Name": "Pork",
+        "Calories": 206.74,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 19.21,
+            "Omega3": 2.95,
+            "Omega6": 0.76,
+            "TransFat": 0.72
+        },
+        "Proteins": {
+            "Total": 21.07,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 0.38,
+            "Fiber": 0.05,
+            "Sugar": 0.09,
+            "ComplexCarbs": 0.24
+        }
+    },
+    {
+        "Id": 16,
+        "Name": "Spinach",
+        "Calories": 250.14,
         "Weight": 100.0,
         "Fats": {
             "Total": 0.93,
-            "Omega3": 0.3,
-            "Omega6": 0.12,
-            "TransFat": 0.12
-        },
-        "Proteins": {
-            "Total": 2.07,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 9.07,
-            "Fiber": 2.1,
-            "Sugar": 0.77,
-            "ComplexCarbs": 6.2
-        }
-    },
-    {
-        "Id": 463,
-        "Name": "Chicken Breast",
-        "Calories": 284.69,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 15.58,
-            "Omega3": 1.38,
-            "Omega6": 1.92,
-            "TransFat": 2.21
-        },
-        "Proteins": {
-            "Total": 19.87,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 0.35,
-            "Fiber": 0.06,
-            "Sugar": 0.01,
-            "ComplexCarbs": 0.28
-        }
-    },
-    {
-        "Id": 464,
-        "Name": "Salmon",
-        "Calories": 119.35,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 11.8,
-            "Omega3": 2.55,
-            "Omega6": 1.77,
-            "TransFat": 1.26
-        },
-        "Proteins": {
-            "Total": 24.13,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 1.13,
-            "Fiber": 0.38,
-            "Sugar": 0.01,
-            "ComplexCarbs": 0.74
-        }
-    },
-    {
-        "Id": 465,
-        "Name": "Almonds",
-        "Calories": 54.46,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 40.4,
-            "Omega3": 7.32,
-            "Omega6": 11.73,
-            "TransFat": 7.69
-        },
-        "Proteins": {
-            "Total": 10.95,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 16.28,
-            "Fiber": 6.23,
-            "Sugar": 4.94,
-            "ComplexCarbs": 5.11
-        }
-    },
-    {
-        "Id": 466,
-        "Name": "Broccoli",
-        "Calories": 479.92,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.91,
-            "Omega3": 0.13,
-            "Omega6": 0.2,
-            "TransFat": 0.01
-        },
-        "Proteins": {
-            "Total": 1.94,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 3.02,
-            "Fiber": 0.86,
-            "Sugar": 0.14,
-            "ComplexCarbs": 2.02
-        }
-    },
-    {
-        "Id": 467,
-        "Name": "Eggs",
-        "Calories": 453.0,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.35,
-            "Omega3": 0.01,
-            "Omega6": 0.08,
-            "TransFat": 0.05
-        },
-        "Proteins": {
-            "Total": 0.72,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 9.19,
-            "Fiber": 0.5,
-            "Sugar": 3.71,
-            "ComplexCarbs": 4.98
-        }
-    },
-    {
-        "Id": 468,
-        "Name": "Milk",
-        "Calories": 32.68,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 22.41,
-            "Omega3": 0.91,
-            "Omega6": 2.56,
-            "TransFat": 2.72
-        },
-        "Proteins": {
-            "Total": 16.29,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 3.48,
-            "Fiber": 0.44,
-            "Sugar": 0.69,
-            "ComplexCarbs": 2.35
-        }
-    },
-    {
-        "Id": 469,
-        "Name": "Cheese",
-        "Calories": 433.91,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 34.93,
-            "Omega3": 3.27,
-            "Omega6": 7.64,
-            "TransFat": 6.88
-        },
-        "Proteins": {
-            "Total": 9.31,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 2.14,
-            "Fiber": 0.23,
-            "Sugar": 0.81,
-            "ComplexCarbs": 1.1
-        }
-    },
-    {
-        "Id": 470,
-        "Name": "Lentils",
-        "Calories": 328.22,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.61,
-            "Omega3": 0.19,
-            "Omega6": 0.0,
-            "TransFat": 0.08
-        },
-        "Proteins": {
-            "Total": 10.3,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 48.4,
-            "Fiber": 9.3,
-            "Sugar": 22.67,
-            "ComplexCarbs": 16.43
-        }
-    },
-    {
-        "Id": 471,
-        "Name": "Rice",
-        "Calories": 77.39,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 5.71,
-            "Omega3": 1.01,
-            "Omega6": 0.24,
-            "TransFat": 0.02
-        },
-        "Proteins": {
-            "Total": 10.05,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 61.28,
-            "Fiber": 4.51,
-            "Sugar": 17.53,
-            "ComplexCarbs": 39.24
-        }
-    },
-    {
-        "Id": 472,
-        "Name": "Oats",
-        "Calories": 406.1,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 3.98,
-            "Omega3": 0.48,
-            "Omega6": 0.51,
-            "TransFat": 0.66
-        },
-        "Proteins": {
-            "Total": 8.16,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 76.97,
-            "Fiber": 18.5,
-            "Sugar": 13.3,
-            "ComplexCarbs": 45.17
-        }
-    },
-    {
-        "Id": 473,
-        "Name": "Beef",
-        "Calories": 368.71,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 19.13,
-            "Omega3": 2.73,
-            "Omega6": 3.2,
-            "TransFat": 3.26
-        },
-        "Proteins": {
-            "Total": 17.96,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 1.65,
-            "Fiber": 0.79,
-            "Sugar": 0.8,
-            "ComplexCarbs": 0.06
-        }
-    },
-    {
-        "Id": 474,
-        "Name": "Pork",
-        "Calories": 405.67,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 27.93,
-            "Omega3": 6.3,
-            "Omega6": 7.17,
-            "TransFat": 1.69
-        },
-        "Proteins": {
-            "Total": 17.17,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 0.47,
-            "Fiber": 0.23,
-            "Sugar": 0.19,
-            "ComplexCarbs": 0.05
-        }
-    },
-    {
-        "Id": 475,
-        "Name": "Spinach",
-        "Calories": 552.1,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.45,
             "Omega3": 0.06,
-            "Omega6": 0.08,
-            "TransFat": 0.04
-        },
-        "Proteins": {
-            "Total": 2.42,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 11.92,
-            "Fiber": 2.37,
-            "Sugar": 2.86,
-            "ComplexCarbs": 6.69
-        }
-    },
-    {
-        "Id": 476,
-        "Name": "Tomato",
-        "Calories": 250.53,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.84,
-            "Omega3": 0.17,
-            "Omega6": 0.25,
-            "TransFat": 0.07
-        },
-        "Proteins": {
-            "Total": 2.23,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 2.6,
-            "Fiber": 0.24,
-            "Sugar": 0.23,
-            "ComplexCarbs": 2.13
-        }
-    },
-    {
-        "Id": 477,
-        "Name": "Cucumber",
-        "Calories": 395.33,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.26,
-            "Omega3": 0.02,
-            "Omega6": 0.07,
-            "TransFat": 0.04
-        },
-        "Proteins": {
-            "Total": 2.47,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 4.93,
-            "Fiber": 2.22,
-            "Sugar": 1.45,
-            "ComplexCarbs": 1.26
-        }
-    },
-    {
-        "Id": 478,
-        "Name": "Strawberries",
-        "Calories": 87.22,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.59,
-            "Omega3": 0.14,
-            "Omega6": 0.0,
+            "Omega6": 0.24,
             "TransFat": 0.06
-        },
-        "Proteins": {
-            "Total": 2.56,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 7.21,
-            "Fiber": 0.31,
-            "Sugar": 2.21,
-            "ComplexCarbs": 4.69
-        }
-    },
-    {
-        "Id": 479,
-        "Name": "Blueberries",
-        "Calories": 103.72,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.61,
-            "Omega3": 0.13,
-            "Omega6": 0.06,
-            "TransFat": 0.03
-        },
-        "Proteins": {
-            "Total": 3.74,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 6.27,
-            "Fiber": 2.25,
-            "Sugar": 1.54,
-            "ComplexCarbs": 2.48
-        }
-    },
-    {
-        "Id": 480,
-        "Name": "Walnuts",
-        "Calories": 123.67,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 57.63,
-            "Omega3": 17.52,
-            "Omega6": 11.75,
-            "TransFat": 7.21
-        },
-        "Proteins": {
-            "Total": 15.57,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 23.75,
-            "Fiber": 1.35,
-            "Sugar": 11.06,
-            "ComplexCarbs": 11.34
-        }
-    },
-    {
-        "Id": 481,
-        "Name": "Cashews",
-        "Calories": 530.2,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 37.14,
-            "Omega3": 7.85,
-            "Omega6": 10.45,
-            "TransFat": 3.11
-        },
-        "Proteins": {
-            "Total": 17.7,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 22.38,
-            "Fiber": 8.22,
-            "Sugar": 1.54,
-            "ComplexCarbs": 12.62
-        }
-    },
-    {
-        "Id": 482,
-        "Name": "Sweet Potato",
-        "Calories": 124.77,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.89,
-            "Omega3": 0.16,
-            "Omega6": 0.17,
-            "TransFat": 0.03
-        },
-        "Proteins": {
-            "Total": 0.6,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 9.84,
-            "Fiber": 1.37,
-            "Sugar": 1.18,
-            "ComplexCarbs": 7.29
-        }
-    },
-    {
-        "Id": 483,
-        "Name": "Avocado",
-        "Calories": 146.65,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.8,
-            "Omega3": 0.21,
-            "Omega6": 0.21,
-            "TransFat": 0.1
-        },
-        "Proteins": {
-            "Total": 4.39,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 2.96,
-            "Fiber": 0.93,
-            "Sugar": 1.3,
-            "ComplexCarbs": 0.73
-        }
-    },
-    {
-        "Id": 484,
-        "Name": "Mushrooms",
-        "Calories": 474.19,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.41,
-            "Omega3": 0.08,
-            "Omega6": 0.06,
-            "TransFat": 0.0
         },
         "Proteins": {
             "Total": 3.8,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 10.82,
-            "Fiber": 2.89,
-            "Sugar": 1.03,
-            "ComplexCarbs": 6.9
+            "Total": 11.94,
+            "Fiber": 0.29,
+            "Sugar": 4.51,
+            "ComplexCarbs": 7.14
         }
     },
     {
-        "Id": 485,
-        "Name": "Onions",
-        "Calories": 296.14,
+        "Id": 17,
+        "Name": "Tomato",
+        "Calories": 590.28,
         "Weight": 100.0,
         "Fats": {
-            "Total": 0.7,
-            "Omega3": 0.13,
-            "Omega6": 0.16,
-            "TransFat": 0.13
-        },
-        "Proteins": {
-            "Total": 4.68,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 4.23,
-            "Fiber": 1.96,
-            "Sugar": 0.74,
-            "ComplexCarbs": 1.53
-        }
-    },
-    {
-        "Id": 486,
-        "Name": "Garlic",
-        "Calories": 421.33,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.91,
-            "Omega3": 0.2,
-            "Omega6": 0.01,
+            "Total": 0.5,
+            "Omega3": 0.06,
+            "Omega6": 0.02,
             "TransFat": 0.01
         },
         "Proteins": {
-            "Total": 0.7,
+            "Total": 4.93,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 6.45,
-            "Fiber": 2.17,
-            "Sugar": 3.14,
-            "ComplexCarbs": 1.14
+            "Total": 2.62,
+            "Fiber": 1.17,
+            "Sugar": 0.33,
+            "ComplexCarbs": 1.12
         }
     },
     {
-        "Id": 487,
-        "Name": "Peanuts",
-        "Calories": 320.18,
+        "Id": 18,
+        "Name": "Cucumber",
+        "Calories": 428.56,
         "Weight": 100.0,
         "Fats": {
-            "Total": 45.38,
-            "Omega3": 11.45,
-            "Omega6": 9.89,
-            "TransFat": 1.05
-        },
-        "Proteins": {
-            "Total": 26.84,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 21.39,
-            "Fiber": 1.3,
-            "Sugar": 0.32,
-            "ComplexCarbs": 19.77
-        }
-    },
-    {
-        "Id": 488,
-        "Name": "Yogurt",
-        "Calories": 564.22,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 34.96,
-            "Omega3": 9.58,
-            "Omega6": 10.44,
-            "TransFat": 2.34
-        },
-        "Proteins": {
-            "Total": 6.81,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 1.74,
-            "Fiber": 0.16,
-            "Sugar": 0.59,
-            "ComplexCarbs": 0.99
-        }
-    },
-    {
-        "Id": 489,
-        "Name": "Tofu",
-        "Calories": 190.29,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.16,
-            "Omega3": 0.04,
-            "Omega6": 0.03,
+            "Total": 0.86,
+            "Omega3": 0.02,
+            "Omega6": 0.28,
             "TransFat": 0.0
         },
         "Proteins": {
-            "Total": 2.06,
+            "Total": 4.32,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 11.59,
-            "Fiber": 2.37,
-            "Sugar": 2.46,
-            "ComplexCarbs": 6.76
+            "Total": 7.78,
+            "Fiber": 2.53,
+            "Sugar": 3.09,
+            "ComplexCarbs": 2.16
         }
     },
     {
-        "Id": 490,
-        "Name": "Chickpeas",
-        "Calories": 535.59,
+        "Id": 19,
+        "Name": "Strawberries",
+        "Calories": 481.42,
         "Weight": 100.0,
         "Fats": {
-            "Total": 4.6,
-            "Omega3": 1.18,
-            "Omega6": 1.44,
-            "TransFat": 0.3
-        },
-        "Proteins": {
-            "Total": 16.88,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 32.14,
-            "Fiber": 11.04,
-            "Sugar": 15.31,
-            "ComplexCarbs": 5.79
-        }
-    },
-    {
-        "Id": 491,
-        "Name": "Quinoa",
-        "Calories": 67.82,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 1.49,
-            "Omega3": 0.02,
-            "Omega6": 0.02,
-            "TransFat": 0.26
-        },
-        "Proteins": {
-            "Total": 5.77,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 69.97,
-            "Fiber": 32.77,
-            "Sugar": 4.65,
-            "ComplexCarbs": 32.55
-        }
-    },
-    {
-        "Id": 492,
-        "Name": "Chia Seeds",
-        "Calories": 318.48,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 47.96,
-            "Omega3": 6.88,
-            "Omega6": 0.76,
-            "TransFat": 3.89
-        },
-        "Proteins": {
-            "Total": 10.95,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 15.46,
-            "Fiber": 4.9,
-            "Sugar": 4.07,
-            "ComplexCarbs": 6.49
-        }
-    },
-    {
-        "Id": 493,
-        "Name": "Flaxseeds",
-        "Calories": 259.62,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 51.56,
-            "Omega3": 7.3,
-            "Omega6": 5.8,
-            "TransFat": 7.58
-        },
-        "Proteins": {
-            "Total": 28.75,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 19.18,
-            "Fiber": 1.78,
-            "Sugar": 7.39,
-            "ComplexCarbs": 10.01
-        }
-    },
-    {
-        "Id": 494,
-        "Name": "Pumpkin Seeds",
-        "Calories": 525.2,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 54.79,
-            "Omega3": 14.01,
-            "Omega6": 11.73,
-            "TransFat": 5.46
-        },
-        "Proteins": {
-            "Total": 18.4,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 18.5,
-            "Fiber": 5.48,
-            "Sugar": 1.32,
-            "ComplexCarbs": 11.7
-        }
-    },
-    {
-        "Id": 495,
-        "Name": "Sunflower Seeds",
-        "Calories": 16.7,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 55.63,
-            "Omega3": 17.99,
-            "Omega6": 3.04,
-            "TransFat": 3.59
-        },
-        "Proteins": {
-            "Total": 27.82,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 10.86,
-            "Fiber": 4.78,
-            "Sugar": 2.73,
-            "ComplexCarbs": 3.35
-        }
-    },
-    {
-        "Id": 496,
-        "Name": "Coconut",
-        "Calories": 65.13,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 44.9,
-            "Omega3": 3.67,
-            "Omega6": 12.38,
-            "TransFat": 3.56
-        },
-        "Proteins": {
-            "Total": 13.3,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 20.44,
-            "Fiber": 3.79,
-            "Sugar": 8.93,
-            "ComplexCarbs": 7.72
-        }
-    },
-    {
-        "Id": 497,
-        "Name": "Pineapple",
-        "Calories": 276.15,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 1.04,
-            "Omega3": 0.1,
-            "Omega6": 0.05,
-            "TransFat": 0.1
-        },
-        "Proteins": {
-            "Total": 2.16,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 17.95,
-            "Fiber": 8.41,
-            "Sugar": 7.39,
-            "ComplexCarbs": 2.15
-        }
-    },
-    {
-        "Id": 498,
-        "Name": "Mango",
-        "Calories": 296.93,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.68,
-            "Omega3": 0.19,
-            "Omega6": 0.01,
-            "TransFat": 0.13
-        },
-        "Proteins": {
-            "Total": 0.33,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 19.58,
-            "Fiber": 3.08,
-            "Sugar": 7.13,
-            "ComplexCarbs": 9.37
-        }
-    },
-    {
-        "Id": 499,
-        "Name": "Peach",
-        "Calories": 290.58,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 4.67,
-            "Omega3": 1.55,
-            "Omega6": 0.29,
-            "TransFat": 0.04
-        },
-        "Proteins": {
-            "Total": 5.93,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 20.81,
-            "Fiber": 4.72,
-            "Sugar": 6.93,
-            "ComplexCarbs": 9.16
-        }
-    },
-    {
-        "Id": 500,
-        "Name": "Pear",
-        "Calories": 215.5,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 1.02,
-            "Omega3": 0.05,
-            "Omega6": 0.12,
-            "TransFat": 0.05
-        },
-        "Proteins": {
-            "Total": 1.06,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 7.71,
-            "Fiber": 2.24,
-            "Sugar": 2.66,
-            "ComplexCarbs": 2.81
-        }
-    },
-    {
-        "Id": 348,
-        "Name": "Grapes",
-        "Calories": 494.56,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.63,
-            "Omega3": 0.09,
-            "Omega6": 0.06,
-            "TransFat": 0.05
-        },
-        "Proteins": {
-            "Total": 0.12,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 21.38,
-            "Fiber": 3.82,
-            "Sugar": 6.17,
-            "ComplexCarbs": 11.39
-        }
-    },
-    {
-        "Id": 349,
-        "Name": "Zucchini",
-        "Calories": 233.19,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.94,
-            "Omega3": 0.3,
-            "Omega6": 0.3,
-            "TransFat": 0.13
-        },
-        "Proteins": {
-            "Total": 2.95,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 5.44,
-            "Fiber": 1.88,
-            "Sugar": 0.36,
-            "ComplexCarbs": 3.2
-        }
-    },
-    {
-        "Id": 350,
-        "Name": "Bell Peppers",
-        "Calories": 384.95,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.45,
-            "Omega3": 0.03,
-            "Omega6": 0.04,
-            "TransFat": 0.06
-        },
-        "Proteins": {
-            "Total": 4.7,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 10.82,
-            "Fiber": 0.86,
-            "Sugar": 1.78,
-            "ComplexCarbs": 8.18
-        }
-    },
-    {
-        "Id": 351,
-        "Name": "Eggplant",
-        "Calories": 86.96,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.64,
+            "Total": 0.17,
             "Omega3": 0.01,
-            "Omega6": 0.12,
-            "TransFat": 0.11
+            "Omega6": 0.06,
+            "TransFat": 0.0
         },
         "Proteins": {
-            "Total": 0.74,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 4.84,
-            "Fiber": 1.18,
-            "Sugar": 1.64,
-            "ComplexCarbs": 2.02
-        }
-    },
-    {
-        "Id": 352,
-        "Name": "Kale",
-        "Calories": 116.27,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.55,
-            "Omega3": 0.1,
-            "Omega6": 0.08,
-            "TransFat": 0.04
-        },
-        "Proteins": {
-            "Total": 1.65,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 5.97,
-            "Fiber": 0.9,
-            "Sugar": 0.8,
-            "ComplexCarbs": 4.27
-        }
-    },
-    {
-        "Id": 353,
-        "Name": "Cabbage",
-        "Calories": 103.73,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.35,
-            "Omega3": 0.05,
-            "Omega6": 0.09,
-            "TransFat": 0.03
-        },
-        "Proteins": {
-            "Total": 2.63,
+            "Total": 3.64,
             "AminoAcids": {}
         },
         "Carbohydrates": {
             "Total": 6.36,
-            "Fiber": 1.75,
-            "Sugar": 0.16,
-            "ComplexCarbs": 4.45
+            "Fiber": 3.05,
+            "Sugar": 2.45,
+            "ComplexCarbs": 0.86
         }
     },
     {
-        "Id": 354,
-        "Name": "Lettuce",
-        "Calories": 397.73,
+        "Id": 20,
+        "Name": "Blueberries",
+        "Calories": 41.32,
         "Weight": 100.0,
         "Fats": {
-            "Total": 0.96,
-            "Omega3": 0.04,
-            "Omega6": 0.09,
-            "TransFat": 0.16
-        },
-        "Proteins": {
-            "Total": 3.59,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 10.12,
-            "Fiber": 0.27,
-            "Sugar": 0.27,
-            "ComplexCarbs": 9.58
-        }
-    },
-    {
-        "Id": 355,
-        "Name": "Cauliflower",
-        "Calories": 97.93,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.43,
-            "Omega3": 0.07,
-            "Omega6": 0.03,
-            "TransFat": 0.08
-        },
-        "Proteins": {
-            "Total": 1.13,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 6.6,
-            "Fiber": 3.01,
-            "Sugar": 0.38,
-            "ComplexCarbs": 3.21
-        }
-    },
-    {
-        "Id": 356,
-        "Name": "Radish",
-        "Calories": 245.75,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.59,
-            "Omega3": 0.01,
-            "Omega6": 0.15,
-            "TransFat": 0.07
-        },
-        "Proteins": {
-            "Total": 1.14,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 4.87,
-            "Fiber": 1.73,
-            "Sugar": 2.19,
-            "ComplexCarbs": 0.95
-        }
-    },
-    {
-        "Id": 357,
-        "Name": "Green Beans",
-        "Calories": 423.66,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 3.32,
-            "Omega3": 1.02,
-            "Omega6": 0.5,
-            "TransFat": 0.4
-        },
-        "Proteins": {
-            "Total": 13.31,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 34.65,
-            "Fiber": 6.83,
-            "Sugar": 1.79,
-            "ComplexCarbs": 26.03
-        }
-    },
-    {
-        "Id": 358,
-        "Name": "Asparagus",
-        "Calories": 21.8,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.79,
+            "Total": 0.54,
             "Omega3": 0.09,
-            "Omega6": 0.18,
-            "TransFat": 0.04
-        },
-        "Proteins": {
-            "Total": 1.67,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 8.85,
-            "Fiber": 0.41,
-            "Sugar": 1.7,
-            "ComplexCarbs": 6.74
-        }
-    },
-    {
-        "Id": 359,
-        "Name": "Beets",
-        "Calories": 586.43,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.99,
-            "Omega3": 0.07,
-            "Omega6": 0.06,
-            "TransFat": 0.04
-        },
-        "Proteins": {
-            "Total": 0.82,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 11.13,
-            "Fiber": 5.32,
-            "Sugar": 5.05,
-            "ComplexCarbs": 0.76
-        }
-    },
-    {
-        "Id": 360,
-        "Name": "Corn",
-        "Calories": 528.43,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 2.78,
-            "Omega3": 0.09,
-            "Omega6": 0.41,
-            "TransFat": 0.51
-        },
-        "Proteins": {
-            "Total": 12.68,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 68.36,
-            "Fiber": 26.88,
-            "Sugar": 12.21,
-            "ComplexCarbs": 29.27
-        }
-    },
-    {
-        "Id": 361,
-        "Name": "Brussels Sprouts",
-        "Calories": 458.22,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.13,
-            "Omega3": 0.03,
-            "Omega6": 0.0,
+            "Omega6": 0.05,
             "TransFat": 0.02
         },
         "Proteins": {
-            "Total": 3.69,
+            "Total": 2.66,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 5.08,
-            "Fiber": 1.95,
-            "Sugar": 0.99,
-            "ComplexCarbs": 2.14
+            "Total": 10.48,
+            "Fiber": 0.4,
+            "Sugar": 3.36,
+            "ComplexCarbs": 6.72
         }
     },
     {
-        "Id": 362,
-        "Name": "Cranberries",
-        "Calories": 38.88,
+        "Id": 21,
+        "Name": "Walnuts",
+        "Calories": 105.5,
         "Weight": 100.0,
         "Fats": {
-            "Total": 0.94,
-            "Omega3": 0.21,
-            "Omega6": 0.12,
-            "TransFat": 0.12
+            "Total": 46.33,
+            "Omega3": 0.0,
+            "Omega6": 3.87,
+            "TransFat": 0.11
         },
         "Proteins": {
-            "Total": 1.14,
+            "Total": 17.88,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 6.23,
-            "Fiber": 1.05,
-            "Sugar": 0.35,
-            "ComplexCarbs": 4.83
+            "Total": 22.98,
+            "Fiber": 3.29,
+            "Sugar": 8.2,
+            "ComplexCarbs": 11.49
         }
     },
     {
-        "Id": 363,
-        "Name": "Pomegranate",
-        "Calories": 585.6,
+        "Id": 22,
+        "Name": "Cashews",
+        "Calories": 99.16,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 37.03,
+            "Omega3": 0.39,
+            "Omega6": 1.63,
+            "TransFat": 0.31
+        },
+        "Proteins": {
+            "Total": 18.53,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 21.12,
+            "Fiber": 3.47,
+            "Sugar": 0.05,
+            "ComplexCarbs": 17.6
+        }
+    },
+    {
+        "Id": 23,
+        "Name": "Sweet Potato",
+        "Calories": 384.85,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.33,
+            "Omega3": 0.03,
+            "Omega6": 0.07,
+            "TransFat": 0.03
+        },
+        "Proteins": {
+            "Total": 4.57,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 11.87,
+            "Fiber": 1.06,
+            "Sugar": 3.61,
+            "ComplexCarbs": 7.2
+        }
+    },
+    {
+        "Id": 24,
+        "Name": "Avocado",
+        "Calories": 213.51,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.95,
+            "Omega3": 0.15,
+            "Omega6": 0.01,
+            "TransFat": 0.04
+        },
+        "Proteins": {
+            "Total": 1.04,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 7.03,
+            "Fiber": 1.68,
+            "Sugar": 1.48,
+            "ComplexCarbs": 3.87
+        }
+    },
+    {
+        "Id": 25,
+        "Name": "Mushrooms",
+        "Calories": 597.6,
         "Weight": 100.0,
         "Fats": {
             "Total": 0.93,
-            "Omega3": 0.24,
-            "Omega6": 0.23,
-            "TransFat": 0.08
-        },
-        "Proteins": {
-            "Total": 3.5,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 4.74,
-            "Fiber": 0.06,
-            "Sugar": 1.66,
-            "ComplexCarbs": 3.02
-        }
-    },
-    {
-        "Id": 364,
-        "Name": "Watermelon",
-        "Calories": 254.59,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.32,
-            "Omega3": 0.08,
-            "Omega6": 0.09,
+            "Omega3": 0.03,
+            "Omega6": 0.01,
             "TransFat": 0.02
         },
         "Proteins": {
-            "Total": 2.29,
+            "Total": 3.33,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 18.11,
-            "Fiber": 2.83,
-            "Sugar": 7.8,
-            "ComplexCarbs": 7.48
+            "Total": 8.9,
+            "Fiber": 2.63,
+            "Sugar": 2.49,
+            "ComplexCarbs": 3.78
         }
     },
     {
-        "Id": 365,
-        "Name": "Honeydew",
-        "Calories": 427.06,
+        "Id": 26,
+        "Name": "Onions",
+        "Calories": 519.28,
         "Weight": 100.0,
         "Fats": {
-            "Total": 0.63,
-            "Omega3": 0.11,
-            "Omega6": 0.2,
-            "TransFat": 0.07
-        },
-        "Proteins": {
-            "Total": 2.33,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 4.22,
-            "Fiber": 1.98,
-            "Sugar": 0.79,
-            "ComplexCarbs": 1.45
-        }
-    },
-    {
-        "Id": 366,
-        "Name": "Papaya",
-        "Calories": 252.12,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.48,
-            "Omega3": 0.12,
-            "Omega6": 0.09,
-            "TransFat": 0.08
-        },
-        "Proteins": {
-            "Total": 2.67,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 7.88,
-            "Fiber": 3.48,
-            "Sugar": 1.56,
-            "ComplexCarbs": 2.84
-        }
-    },
-    {
-        "Id": 367,
-        "Name": "Kiwi",
-        "Calories": 328.37,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.84,
-            "Omega3": 0.23,
-            "Omega6": 0.2,
-            "TransFat": 0.12
-        },
-        "Proteins": {
-            "Total": 2.68,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 7.52,
-            "Fiber": 2.28,
-            "Sugar": 1.95,
-            "ComplexCarbs": 3.29
-        }
-    },
-    {
-        "Id": 368,
-        "Name": "Fig",
-        "Calories": 422.67,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.83,
-            "Omega3": 0.02,
-            "Omega6": 0.18,
-            "TransFat": 0.06
-        },
-        "Proteins": {
-            "Total": 0.48,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 24.96,
-            "Fiber": 4.47,
-            "Sugar": 0.22,
-            "ComplexCarbs": 20.27
-        }
-    },
-    {
-        "Id": 369,
-        "Name": "Dates",
-        "Calories": 459.45,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 1.05,
-            "Omega3": 0.05,
-            "Omega6": 0.25,
+            "Total": 0.55,
+            "Omega3": 0.01,
+            "Omega6": 0.11,
             "TransFat": 0.03
         },
         "Proteins": {
-            "Total": 1.03,
+            "Total": 1.33,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 24.84,
-            "Fiber": 0.85,
-            "Sugar": 0.86,
-            "ComplexCarbs": 23.13
+            "Total": 10.92,
+            "Fiber": 4.57,
+            "Sugar": 1.15,
+            "ComplexCarbs": 5.2
         }
     },
     {
-        "Id": 370,
-        "Name": "Plums",
-        "Calories": 68.7,
+        "Id": 27,
+        "Name": "Garlic",
+        "Calories": 261.77,
         "Weight": 100.0,
         "Fats": {
-            "Total": 0.9,
-            "Omega3": 0.19,
-            "Omega6": 0.21,
+            "Total": 0.73,
+            "Omega3": 0.02,
+            "Omega6": 0.22,
+            "TransFat": 0.03
+        },
+        "Proteins": {
+            "Total": 3.72,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 2.53,
+            "Fiber": 0.87,
+            "Sugar": 0.63,
+            "ComplexCarbs": 1.03
+        }
+    },
+    {
+        "Id": 28,
+        "Name": "Peanuts",
+        "Calories": 393.03,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 45.21,
+            "Omega3": 3.88,
+            "Omega6": 4.04,
+            "TransFat": 3.31
+        },
+        "Proteins": {
+            "Total": 12.9,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 11.66,
+            "Fiber": 3.0,
+            "Sugar": 3.58,
+            "ComplexCarbs": 5.08
+        }
+    },
+    {
+        "Id": 29,
+        "Name": "Yogurt",
+        "Calories": 398.56,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 26.31,
+            "Omega3": 1.23,
+            "Omega6": 3.74,
+            "TransFat": 0.91
+        },
+        "Proteins": {
+            "Total": 18.93,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 6.36,
+            "Fiber": 0.53,
+            "Sugar": 0.1,
+            "ComplexCarbs": 5.73
+        }
+    },
+    {
+        "Id": 30,
+        "Name": "Tofu",
+        "Calories": 276.43,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.26,
+            "Omega3": 0.05,
+            "Omega6": 0.06,
             "TransFat": 0.0
         },
         "Proteins": {
-            "Total": 2.08,
+            "Total": 2.76,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 4.58,
-            "Fiber": 1.11,
-            "Sugar": 1.11,
-            "ComplexCarbs": 2.36
+            "Total": 8.15,
+            "Fiber": 2.03,
+            "Sugar": 2.51,
+            "ComplexCarbs": 3.61
         }
     },
     {
-        "Id": 371,
-        "Name": "Apricots",
-        "Calories": 72.72,
+        "Id": 31,
+        "Name": "Chickpeas",
+        "Calories": 260.71,
         "Weight": 100.0,
         "Fats": {
-            "Total": 0.96,
-            "Omega3": 0.15,
-            "Omega6": 0.25,
-            "TransFat": 0.12
-        },
-        "Proteins": {
-            "Total": 3.96,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 3.0,
-            "Fiber": 0.29,
-            "Sugar": 0.52,
-            "ComplexCarbs": 2.19
-        }
-    },
-    {
-        "Id": 372,
-        "Name": "Hazelnuts",
-        "Calories": 430.57,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 37.42,
-            "Omega3": 11.75,
-            "Omega6": 1.13,
-            "TransFat": 0.86
-        },
-        "Proteins": {
-            "Total": 14.29,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 20.26,
-            "Fiber": 4.29,
-            "Sugar": 3.96,
-            "ComplexCarbs": 12.01
-        }
-    },
-    {
-        "Id": 373,
-        "Name": "Pecans",
-        "Calories": 298.25,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 47.45,
-            "Omega3": 14.26,
-            "Omega6": 1.65,
-            "TransFat": 4.86
-        },
-        "Proteins": {
-            "Total": 12.14,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 10.9,
-            "Fiber": 0.04,
-            "Sugar": 1.14,
-            "ComplexCarbs": 9.72
-        }
-    },
-    {
-        "Id": 374,
-        "Name": "Macadamia Nuts",
-        "Calories": 271.59,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 33.57,
-            "Omega3": 6.16,
-            "Omega6": 2.98,
-            "TransFat": 3.52
-        },
-        "Proteins": {
-            "Total": 28.12,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 13.78,
-            "Fiber": 2.68,
-            "Sugar": 2.85,
-            "ComplexCarbs": 8.25
-        }
-    },
-    {
-        "Id": 375,
-        "Name": "Brazil Nuts",
-        "Calories": 47.83,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 34.42,
-            "Omega3": 7.86,
-            "Omega6": 5.3,
-            "TransFat": 1.52
-        },
-        "Proteins": {
-            "Total": 28.43,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 14.84,
-            "Fiber": 2.43,
-            "Sugar": 4.19,
-            "ComplexCarbs": 8.22
-        }
-    },
-    {
-        "Id": 376,
-        "Name": "Hemp Seeds",
-        "Calories": 168.35,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 47.87,
-            "Omega3": 11.71,
-            "Omega6": 6.78,
-            "TransFat": 3.7
-        },
-        "Proteins": {
-            "Total": 22.43,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 24.76,
-            "Fiber": 2.2,
-            "Sugar": 11.3,
-            "ComplexCarbs": 11.26
-        }
-    },
-    {
-        "Id": 377,
-        "Name": "Sesame Seeds",
-        "Calories": 433.47,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 59.99,
-            "Omega3": 1.9,
-            "Omega6": 8.39,
-            "TransFat": 4.35
-        },
-        "Proteins": {
-            "Total": 26.6,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 16.95,
-            "Fiber": 4.07,
-            "Sugar": 3.13,
-            "ComplexCarbs": 9.75
-        }
-    },
-    {
-        "Id": 378,
-        "Name": "Barley",
-        "Calories": 76.68,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 4.73,
-            "Omega3": 1.52,
-            "Omega6": 0.51,
-            "TransFat": 0.46
-        },
-        "Proteins": {
-            "Total": 6.73,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 72.2,
-            "Fiber": 24.06,
-            "Sugar": 24.5,
-            "ComplexCarbs": 23.64
-        }
-    },
-    {
-        "Id": 379,
-        "Name": "Farro",
-        "Calories": 15.6,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.49,
-            "Omega3": 0.03,
-            "Omega6": 0.15,
-            "TransFat": 0.05
-        },
-        "Proteins": {
-            "Total": 3.99,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 11.61,
-            "Fiber": 0.07,
-            "Sugar": 2.32,
-            "ComplexCarbs": 9.22
-        }
-    },
-    {
-        "Id": 380,
-        "Name": "Millet",
-        "Calories": 185.58,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 3.35,
-            "Omega3": 0.21,
-            "Omega6": 0.09,
-            "TransFat": 0.39
-        },
-        "Proteins": {
-            "Total": 11.8,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 71.63,
-            "Fiber": 3.36,
-            "Sugar": 23.86,
-            "ComplexCarbs": 44.41
-        }
-    },
-    {
-        "Id": 381,
-        "Name": "Bulgur",
-        "Calories": 503.22,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.79,
-            "Omega3": 0.18,
-            "Omega6": 0.07,
-            "TransFat": 0.04
-        },
-        "Proteins": {
-            "Total": 1.36,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 2.86,
-            "Fiber": 0.56,
-            "Sugar": 1.13,
-            "ComplexCarbs": 1.17
-        }
-    },
-    {
-        "Id": 382,
-        "Name": "Buckwheat",
-        "Calories": 492.3,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 2.94,
-            "Omega3": 0.82,
-            "Omega6": 0.5,
-            "TransFat": 0.12
-        },
-        "Proteins": {
-            "Total": 10.47,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 65.44,
-            "Fiber": 5.18,
-            "Sugar": 19.13,
-            "ComplexCarbs": 41.13
-        }
-    },
-    {
-        "Id": 383,
-        "Name": "Sorghum",
-        "Calories": 212.92,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 6.44,
-            "Omega3": 2.12,
-            "Omega6": 0.41,
-            "TransFat": 0.94
-        },
-        "Proteins": {
-            "Total": 11.83,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 71.31,
-            "Fiber": 28.64,
-            "Sugar": 0.46,
-            "ComplexCarbs": 42.21
-        }
-    },
-    {
-        "Id": 384,
-        "Name": "Durian",
-        "Calories": 122.89,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.53,
-            "Omega3": 0.11,
-            "Omega6": 0.16,
-            "TransFat": 0.03
-        },
-        "Proteins": {
-            "Total": 4.83,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 2.81,
-            "Fiber": 0.42,
-            "Sugar": 1.01,
-            "ComplexCarbs": 1.38
-        }
-    },
-    {
-        "Id": 385,
-        "Name": "Jackfruit",
-        "Calories": 239.71,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 1.44,
-            "Omega3": 0.33,
-            "Omega6": 0.36,
+            "Total": 2.46,
+            "Omega3": 0.14,
+            "Omega6": 0.8,
             "TransFat": 0.23
         },
         "Proteins": {
-            "Total": 1.28,
+            "Total": 9.53,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 8.42,
-            "Fiber": 0.68,
-            "Sugar": 1.42,
-            "ComplexCarbs": 6.32
+            "Total": 42.16,
+            "Fiber": 10.19,
+            "Sugar": 5.34,
+            "ComplexCarbs": 26.63
         }
     },
     {
-        "Id": 386,
-        "Name": "Goji Berries",
-        "Calories": 67.58,
+        "Id": 32,
+        "Name": "Quinoa",
+        "Calories": 391.29,
         "Weight": 100.0,
         "Fats": {
-            "Total": 0.17,
-            "Omega3": 0.02,
-            "Omega6": 0.05,
-            "TransFat": 0.01
+            "Total": 2.92,
+            "Omega3": 0.01,
+            "Omega6": 0.92,
+            "TransFat": 0.2
         },
         "Proteins": {
-            "Total": 4.1,
+            "Total": 6.5,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 6.93,
-            "Fiber": 1.11,
-            "Sugar": 0.05,
-            "ComplexCarbs": 5.77
+            "Total": 69.09,
+            "Fiber": 13.7,
+            "Sugar": 4.11,
+            "ComplexCarbs": 51.28
         }
     },
     {
-        "Id": 387,
-        "Name": "Acai Berries",
-        "Calories": 285.99,
+        "Id": 33,
+        "Name": "Chia Seeds",
+        "Calories": 373.69,
         "Weight": 100.0,
         "Fats": {
-            "Total": 0.87,
-            "Omega3": 0.19,
-            "Omega6": 0.13,
-            "TransFat": 0.0
+            "Total": 36.48,
+            "Omega3": 5.35,
+            "Omega6": 8.72,
+            "TransFat": 0.53
+        },
+        "Proteins": {
+            "Total": 21.93,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 15.88,
+            "Fiber": 2.91,
+            "Sugar": 4.37,
+            "ComplexCarbs": 8.6
+        }
+    },
+    {
+        "Id": 34,
+        "Name": "Flaxseeds",
+        "Calories": 109.51,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 49.49,
+            "Omega3": 6.68,
+            "Omega6": 2.25,
+            "TransFat": 2.16
+        },
+        "Proteins": {
+            "Total": 13.08,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 24.43,
+            "Fiber": 5.23,
+            "Sugar": 4.76,
+            "ComplexCarbs": 14.44
+        }
+    },
+    {
+        "Id": 35,
+        "Name": "Pumpkin Seeds",
+        "Calories": 50.53,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 38.98,
+            "Omega3": 5.47,
+            "Omega6": 8.52,
+            "TransFat": 2.6
+        },
+        "Proteins": {
+            "Total": 11.59,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 13.69,
+            "Fiber": 4.82,
+            "Sugar": 4.74,
+            "ComplexCarbs": 4.13
+        }
+    },
+    {
+        "Id": 36,
+        "Name": "Sunflower Seeds",
+        "Calories": 584.1,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 40.95,
+            "Omega3": 0.24,
+            "Omega6": 1.6,
+            "TransFat": 2.14
+        },
+        "Proteins": {
+            "Total": 16.09,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 19.43,
+            "Fiber": 1.31,
+            "Sugar": 0.34,
+            "ComplexCarbs": 17.78
+        }
+    },
+    {
+        "Id": 37,
+        "Name": "Coconut",
+        "Calories": 586.71,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 44.33,
+            "Omega3": 1.34,
+            "Omega6": 16.38,
+            "TransFat": 3.94
+        },
+        "Proteins": {
+            "Total": 11.74,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 18.07,
+            "Fiber": 3.5,
+            "Sugar": 5.03,
+            "ComplexCarbs": 9.54
+        }
+    },
+    {
+        "Id": 38,
+        "Name": "Pineapple",
+        "Calories": 173.03,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 1.48,
+            "Omega3": 0.21,
+            "Omega6": 0.09,
+            "TransFat": 0.13
+        },
+        "Proteins": {
+            "Total": 0.59,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 11.24,
+            "Fiber": 0.56,
+            "Sugar": 2.81,
+            "ComplexCarbs": 7.87
+        }
+    },
+    {
+        "Id": 39,
+        "Name": "Mango",
+        "Calories": 289.58,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 1.32,
+            "Omega3": 0.16,
+            "Omega6": 0.43,
+            "TransFat": 0.08
+        },
+        "Proteins": {
+            "Total": 1.43,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 8.17,
+            "Fiber": 0.63,
+            "Sugar": 1.26,
+            "ComplexCarbs": 6.28
+        }
+    },
+    {
+        "Id": 40,
+        "Name": "Peach",
+        "Calories": 428.39,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 3.44,
+            "Omega3": 0.14,
+            "Omega6": 1.08,
+            "TransFat": 0.18
+        },
+        "Proteins": {
+            "Total": 18.74,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 42.21,
+            "Fiber": 16.14,
+            "Sugar": 10.01,
+            "ComplexCarbs": 16.06
+        }
+    },
+    {
+        "Id": 41,
+        "Name": "Pear",
+        "Calories": 309.0,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.99,
+            "Omega3": 0.04,
+            "Omega6": 0.29,
+            "TransFat": 0.02
+        },
+        "Proteins": {
+            "Total": 0.44,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 8.93,
+            "Fiber": 2.91,
+            "Sugar": 1.7,
+            "ComplexCarbs": 4.32
+        }
+    },
+    {
+        "Id": 42,
+        "Name": "Grapes",
+        "Calories": 480.83,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.51,
+            "Omega3": 0.1,
+            "Omega6": 0.17,
+            "TransFat": 0.01
         },
         "Proteins": {
             "Total": 1.76,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 8.5,
-            "Fiber": 0.27,
-            "Sugar": 1.92,
-            "ComplexCarbs": 6.31
+            "Total": 17.27,
+            "Fiber": 1.63,
+            "Sugar": 1.16,
+            "ComplexCarbs": 14.48
         }
     },
     {
-        "Id": 388,
-        "Name": "Passion Fruit",
-        "Calories": 141.15,
+        "Id": 43,
+        "Name": "Zucchini",
+        "Calories": 193.73,
         "Weight": 100.0,
         "Fats": {
-            "Total": 0.71,
-            "Omega3": 0.07,
-            "Omega6": 0.13,
-            "TransFat": 0.11
+            "Total": 0.3,
+            "Omega3": 0.01,
+            "Omega6": 0.12,
+            "TransFat": 0.0
         },
         "Proteins": {
-            "Total": 1.6,
+            "Total": 2.93,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 7.08,
-            "Fiber": 1.25,
-            "Sugar": 1.23,
-            "ComplexCarbs": 4.6
+            "Total": 9.47,
+            "Fiber": 4.03,
+            "Sugar": 0.33,
+            "ComplexCarbs": 5.11
         }
     },
     {
-        "Id": 389,
-        "Name": "Starfruit",
-        "Calories": 591.49,
+        "Id": 44,
+        "Name": "Bell Peppers",
+        "Calories": 435.2,
         "Weight": 100.0,
         "Fats": {
-            "Total": 0.61,
-            "Omega3": 0.2,
-            "Omega6": 0.15,
-            "TransFat": 0.12
+            "Total": 0.2,
+            "Omega3": 0.03,
+            "Omega6": 0.01,
+            "TransFat": 0.02
         },
         "Proteins": {
             "Total": 1.61,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 10.46,
-            "Fiber": 3.39,
-            "Sugar": 5.15,
-            "ComplexCarbs": 1.92
+            "Total": 5.29,
+            "Fiber": 2.18,
+            "Sugar": 0.08,
+            "ComplexCarbs": 3.03
         }
     },
     {
-        "Id": 390,
-        "Name": "Dragonfruit",
-        "Calories": 512.51,
+        "Id": 45,
+        "Name": "Eggplant",
+        "Calories": 515.78,
         "Weight": 100.0,
         "Fats": {
-            "Total": 1.22,
-            "Omega3": 0.4,
-            "Omega6": 0.23,
-            "TransFat": 0.17
-        },
-        "Proteins": {
-            "Total": 2.08,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 24.53,
-            "Fiber": 10.33,
-            "Sugar": 2.39,
-            "ComplexCarbs": 11.81
-        }
-    },
-    {
-        "Id": 391,
-        "Name": "Lychee",
-        "Calories": 502.19,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.52,
-            "Omega3": 0.07,
-            "Omega6": 0.16,
-            "TransFat": 0.06
-        },
-        "Proteins": {
-            "Total": 1.39,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 2.64,
-            "Fiber": 0.14,
-            "Sugar": 0.83,
-            "ComplexCarbs": 1.67
-        }
-    },
-    {
-        "Id": 392,
-        "Name": "Persimmon",
-        "Calories": 428.98,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.67,
-            "Omega3": 0.06,
-            "Omega6": 0.09,
-            "TransFat": 0.01
-        },
-        "Proteins": {
-            "Total": 1.57,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 7.87,
-            "Fiber": 1.26,
-            "Sugar": 1.06,
-            "ComplexCarbs": 5.55
-        }
-    },
-    {
-        "Id": 393,
-        "Name": "Guava",
-        "Calories": 270.31,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.49,
-            "Omega3": 0.12,
-            "Omega6": 0.06,
+            "Total": 0.78,
+            "Omega3": 0.02,
+            "Omega6": 0.2,
             "TransFat": 0.03
         },
         "Proteins": {
-            "Total": 2.28,
+            "Total": 0.85,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 11.28,
-            "Fiber": 0.22,
-            "Sugar": 4.07,
-            "ComplexCarbs": 6.99
+            "Total": 4.47,
+            "Fiber": 0.71,
+            "Sugar": 0.33,
+            "ComplexCarbs": 3.43
         }
     },
     {
-        "Id": 394,
-        "Name": "Tamarind",
-        "Calories": 62.73,
+        "Id": 46,
+        "Name": "Kale",
+        "Calories": 63.75,
         "Weight": 100.0,
         "Fats": {
-            "Total": 0.69,
-            "Omega3": 0.1,
-            "Omega6": 0.23,
-            "TransFat": 0.07
+            "Total": 0.82,
+            "Omega3": 0.06,
+            "Omega6": 0.14,
+            "TransFat": 0.02
         },
         "Proteins": {
-            "Total": 2.71,
+            "Total": 4.39,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 4.32,
-            "Fiber": 1.81,
-            "Sugar": 1.5,
-            "ComplexCarbs": 1.01
+            "Total": 9.52,
+            "Fiber": 2.14,
+            "Sugar": 3.21,
+            "ComplexCarbs": 4.17
         }
     },
     {
-        "Id": 395,
-        "Name": "Coconut Water",
-        "Calories": 533.13,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 53.64,
-            "Omega3": 0.02,
-            "Omega6": 9.32,
-            "TransFat": 6.06
-        },
-        "Proteins": {
-            "Total": 16.49,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 15.01,
-            "Fiber": 2.92,
-            "Sugar": 6.64,
-            "ComplexCarbs": 5.45
-        }
-    },
-    {
-        "Id": 396,
-        "Name": "Seaweed",
-        "Calories": 487.55,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.99,
-            "Omega3": 0.21,
-            "Omega6": 0.19,
-            "TransFat": 0.19
-        },
-        "Proteins": {
-            "Total": 1.77,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 11.82,
-            "Fiber": 3.85,
-            "Sugar": 3.92,
-            "ComplexCarbs": 4.05
-        }
-    },
-    {
-        "Id": 397,
-        "Name": "Nori",
-        "Calories": 406.42,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.27,
-            "Omega3": 0.04,
-            "Omega6": 0.05,
-            "TransFat": 0.01
-        },
-        "Proteins": {
-            "Total": 1.54,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 10.92,
-            "Fiber": 0.19,
-            "Sugar": 1.25,
-            "ComplexCarbs": 9.48
-        }
-    },
-    {
-        "Id": 398,
-        "Name": "Wakame",
-        "Calories": 428.7,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.9,
-            "Omega3": 0.2,
-            "Omega6": 0.16,
-            "TransFat": 0.09
-        },
-        "Proteins": {
-            "Total": 0.83,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 10.17,
-            "Fiber": 3.63,
-            "Sugar": 3.37,
-            "ComplexCarbs": 3.17
-        }
-    },
-    {
-        "Id": 399,
-        "Name": "Kombu",
-        "Calories": 516.43,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.49,
-            "Omega3": 0.01,
-            "Omega6": 0.13,
-            "TransFat": 0.04
-        },
-        "Proteins": {
-            "Total": 4.25,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 10.71,
-            "Fiber": 5.3,
-            "Sugar": 2.34,
-            "ComplexCarbs": 3.07
-        }
-    },
-    {
-        "Id": 400,
-        "Name": "Oysters",
-        "Calories": 475.6,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 8.16,
-            "Omega3": 1.23,
-            "Omega6": 2.23,
-            "TransFat": 1.09
-        },
-        "Proteins": {
-            "Total": 17.78,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 0.13,
-            "Fiber": 0.05,
-            "Sugar": 0.06,
-            "ComplexCarbs": 0.02
-        }
-    },
-    {
-        "Id": 401,
-        "Name": "Mussels",
-        "Calories": 568.84,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 5.15,
-            "Omega3": 1.01,
-            "Omega6": 0.86,
-            "TransFat": 0.42
-        },
-        "Proteins": {
-            "Total": 18.46,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 2.0,
-            "Fiber": 0.26,
-            "Sugar": 0.32,
-            "ComplexCarbs": 1.42
-        }
-    },
-    {
-        "Id": 402,
-        "Name": "Shrimp",
-        "Calories": 175.63,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 4.7,
-            "Omega3": 0.19,
-            "Omega6": 1.0,
-            "TransFat": 0.3
-        },
-        "Proteins": {
-            "Total": 23.58,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 0.05,
-            "Fiber": 0.0,
-            "Sugar": 0.01,
-            "ComplexCarbs": 0.04
-        }
-    },
-    {
-        "Id": 403,
-        "Name": "Crab",
-        "Calories": 550.92,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 19.35,
-            "Omega3": 1.23,
-            "Omega6": 2.4,
-            "TransFat": 1.88
-        },
-        "Proteins": {
-            "Total": 22.78,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 1.42,
-            "Fiber": 0.0,
-            "Sugar": 0.13,
-            "ComplexCarbs": 1.29
-        }
-    },
-    {
-        "Id": 404,
-        "Name": "Lobster",
-        "Calories": 254.52,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 16.78,
-            "Omega3": 4.22,
-            "Omega6": 2.25,
-            "TransFat": 0.22
-        },
-        "Proteins": {
-            "Total": 16.56,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 1.95,
-            "Fiber": 0.48,
-            "Sugar": 0.23,
-            "ComplexCarbs": 1.24
-        }
-    },
-    {
-        "Id": 405,
-        "Name": "Squid",
-        "Calories": 481.54,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.39,
-            "Omega3": 0.11,
-            "Omega6": 0.02,
-            "TransFat": 0.01
-        },
-        "Proteins": {
-            "Total": 3.15,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 3.35,
-            "Fiber": 0.2,
-            "Sugar": 0.44,
-            "ComplexCarbs": 2.71
-        }
-    },
-    {
-        "Id": 406,
-        "Name": "Octopus",
-        "Calories": 379.65,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.33,
-            "Omega3": 0.08,
-            "Omega6": 0.03,
-            "TransFat": 0.01
-        },
-        "Proteins": {
-            "Total": 4.9,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 11.4,
-            "Fiber": 0.9,
-            "Sugar": 0.59,
-            "ComplexCarbs": 9.91
-        }
-    },
-    {
-        "Id": 407,
-        "Name": "Anchovies",
-        "Calories": 143.79,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.14,
-            "Omega3": 0.04,
-            "Omega6": 0.03,
-            "TransFat": 0.01
-        },
-        "Proteins": {
-            "Total": 3.73,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 4.68,
-            "Fiber": 2.11,
-            "Sugar": 1.11,
-            "ComplexCarbs": 1.46
-        }
-    },
-    {
-        "Id": 408,
-        "Name": "Sardines",
-        "Calories": 147.02,
+        "Id": 47,
+        "Name": "Cabbage",
+        "Calories": 563.93,
         "Weight": 100.0,
         "Fats": {
             "Total": 0.31,
-            "Omega3": 0.1,
-            "Omega6": 0.05,
-            "TransFat": 0.01
+            "Omega3": 0.03,
+            "Omega6": 0.1,
+            "TransFat": 0.02
         },
         "Proteins": {
-            "Total": 4.61,
+            "Total": 4.36,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 2.38,
-            "Fiber": 1.17,
-            "Sugar": 0.55,
-            "ComplexCarbs": 0.66
+            "Total": 11.72,
+            "Fiber": 4.48,
+            "Sugar": 1.72,
+            "ComplexCarbs": 5.52
         }
     },
     {
-        "Id": 409,
-        "Name": "Tuna",
-        "Calories": 61.3,
+        "Id": 48,
+        "Name": "Lettuce",
+        "Calories": 581.78,
         "Weight": 100.0,
         "Fats": {
-            "Total": 18.94,
-            "Omega3": 5.96,
-            "Omega6": 0.78,
-            "TransFat": 1.14
-        },
-        "Proteins": {
-            "Total": 23.52,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 0.84,
-            "Fiber": 0.2,
-            "Sugar": 0.03,
-            "ComplexCarbs": 0.61
-        }
-    },
-    {
-        "Id": 410,
-        "Name": "Cod",
-        "Calories": 348.36,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.7,
-            "Omega3": 0.19,
-            "Omega6": 0.21,
-            "TransFat": 0.01
-        },
-        "Proteins": {
-            "Total": 3.4,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 4.48,
-            "Fiber": 0.83,
-            "Sugar": 2.08,
-            "ComplexCarbs": 1.57
-        }
-    },
-    {
-        "Id": 411,
-        "Name": "Halibut",
-        "Calories": 97.78,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.28,
-            "Omega3": 0.01,
-            "Omega6": 0.0,
-            "TransFat": 0.05
-        },
-        "Proteins": {
-            "Total": 0.62,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 2.61,
-            "Fiber": 1.25,
-            "Sugar": 0.51,
-            "ComplexCarbs": 0.85
-        }
-    },
-    {
-        "Id": 412,
-        "Name": "Trout",
-        "Calories": 526.37,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.63,
+            "Total": 0.68,
             "Omega3": 0.13,
-            "Omega6": 0.05,
-            "TransFat": 0.05
+            "Omega6": 0.08,
+            "TransFat": 0.04
         },
         "Proteins": {
-            "Total": 2.94,
+            "Total": 1.9,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 10.86,
-            "Fiber": 0.52,
-            "Sugar": 1.5,
-            "ComplexCarbs": 8.84
+            "Total": 5.09,
+            "Fiber": 2.3,
+            "Sugar": 1.79,
+            "ComplexCarbs": 1.0
         }
     },
     {
-        "Id": 413,
-        "Name": "Mackerel",
-        "Calories": 233.84,
+        "Id": 49,
+        "Name": "Cauliflower",
+        "Calories": 112.17,
         "Weight": 100.0,
         "Fats": {
-            "Total": 0.58,
-            "Omega3": 0.11,
-            "Omega6": 0.01,
-            "TransFat": 0.06
-        },
-        "Proteins": {
-            "Total": 1.71,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 7.22,
-            "Fiber": 1.36,
-            "Sugar": 2.21,
-            "ComplexCarbs": 3.65
-        }
-    },
-    {
-        "Id": 414,
-        "Name": "Herring",
-        "Calories": 397.48,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.76,
+            "Total": 0.65,
             "Omega3": 0.13,
-            "Omega6": 0.11,
+            "Omega6": 0.22,
             "TransFat": 0.03
         },
         "Proteins": {
-            "Total": 3.82,
+            "Total": 2.04,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 5.42,
-            "Fiber": 1.9,
-            "Sugar": 0.64,
-            "ComplexCarbs": 2.88
-        }
-    },
-    {
-        "Id": 415,
-        "Name": "Tilapia",
-        "Calories": 261.68,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.9,
-            "Omega3": 0.23,
-            "Omega6": 0.07,
-            "TransFat": 0.15
-        },
-        "Proteins": {
-            "Total": 4.9,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 8.89,
-            "Fiber": 3.07,
-            "Sugar": 3.69,
-            "ComplexCarbs": 2.13
-        }
-    },
-    {
-        "Id": 416,
-        "Name": "Catfish",
-        "Calories": 244.84,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 3.87,
-            "Omega3": 0.85,
-            "Omega6": 1.05,
-            "TransFat": 0.25
-        },
-        "Proteins": {
-            "Total": 20.07,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 1.14,
-            "Fiber": 0.3,
-            "Sugar": 0.03,
-            "ComplexCarbs": 0.81
-        }
-    },
-    {
-        "Id": 417,
-        "Name": "Duck",
-        "Calories": 369.37,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 36.39,
-            "Omega3": 9.33,
-            "Omega6": 3.25,
-            "TransFat": 5.93
-        },
-        "Proteins": {
-            "Total": 23.16,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 1.02,
-            "Fiber": 0.28,
-            "Sugar": 0.44,
-            "ComplexCarbs": 0.3
-        }
-    },
-    {
-        "Id": 418,
-        "Name": "Turkey",
-        "Calories": 91.92,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.67,
-            "Omega3": 0.19,
-            "Omega6": 0.16,
-            "TransFat": 0.06
-        },
-        "Proteins": {
-            "Total": 2.79,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 6.66,
-            "Fiber": 3.03,
-            "Sugar": 2.19,
-            "ComplexCarbs": 1.44
-        }
-    },
-    {
-        "Id": 419,
-        "Name": "Lamb",
-        "Calories": 342.99,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 35.12,
-            "Omega3": 2.24,
-            "Omega6": 1.07,
-            "TransFat": 1.61
-        },
-        "Proteins": {
-            "Total": 25.75,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 0.58,
-            "Fiber": 0.14,
+            "Total": 11.0,
+            "Fiber": 4.95,
             "Sugar": 0.1,
-            "ComplexCarbs": 0.34
+            "ComplexCarbs": 5.95
         }
     },
     {
-        "Id": 420,
-        "Name": "Venison",
-        "Calories": 218.14,
+        "Id": 50,
+        "Name": "Radish",
+        "Calories": 502.4,
         "Weight": 100.0,
         "Fats": {
-            "Total": 28.37,
-            "Omega3": 5.02,
-            "Omega6": 9.26,
-            "TransFat": 2.74
+            "Total": 0.62,
+            "Omega3": 0.04,
+            "Omega6": 0.15,
+            "TransFat": 0.04
         },
         "Proteins": {
-            "Total": 23.96,
+            "Total": 0.94,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 1.82,
-            "Fiber": 0.54,
-            "Sugar": 0.43,
-            "ComplexCarbs": 0.85
+            "Total": 5.81,
+            "Fiber": 0.25,
+            "Sugar": 1.14,
+            "ComplexCarbs": 4.42
         }
     },
     {
-        "Id": 421,
-        "Name": "Rabbit",
-        "Calories": 498.29,
+        "Id": 51,
+        "Name": "Green Beans",
+        "Calories": 70.92,
         "Weight": 100.0,
         "Fats": {
-            "Total": 26.16,
-            "Omega3": 2.06,
-            "Omega6": 8.55,
-            "TransFat": 2.58
+            "Total": 2.16,
+            "Omega3": 0.36,
+            "Omega6": 0.43,
+            "TransFat": 0.19
         },
         "Proteins": {
-            "Total": 29.57,
+            "Total": 21.7,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 0.64,
-            "Fiber": 0.02,
-            "Sugar": 0.17,
+            "Total": 46.57,
+            "Fiber": 19.39,
+            "Sugar": 13.6,
+            "ComplexCarbs": 13.58
+        }
+    },
+    {
+        "Id": 52,
+        "Name": "Asparagus",
+        "Calories": 94.47,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.65,
+            "Omega3": 0.06,
+            "Omega6": 0.21,
+            "TransFat": 0.04
+        },
+        "Proteins": {
+            "Total": 2.57,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 8.86,
+            "Fiber": 1.52,
+            "Sugar": 0.78,
+            "ComplexCarbs": 6.56
+        }
+    },
+    {
+        "Id": 53,
+        "Name": "Beets",
+        "Calories": 122.36,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.11,
+            "Omega3": 0.02,
+            "Omega6": 0.03,
+            "TransFat": 0.01
+        },
+        "Proteins": {
+            "Total": 4.41,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 5.48,
+            "Fiber": 0.19,
+            "Sugar": 0.82,
+            "ComplexCarbs": 4.47
+        }
+    },
+    {
+        "Id": 54,
+        "Name": "Corn",
+        "Calories": 123.41,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 2.9,
+            "Omega3": 0.18,
+            "Omega6": 1.03,
+            "TransFat": 0.07
+        },
+        "Proteins": {
+            "Total": 8.21,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 61.99,
+            "Fiber": 28.94,
+            "Sugar": 16.96,
+            "ComplexCarbs": 16.09
+        }
+    },
+    {
+        "Id": 55,
+        "Name": "Brussels Sprouts",
+        "Calories": 308.99,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.66,
+            "Omega3": 0.01,
+            "Omega6": 0.23,
+            "TransFat": 0.01
+        },
+        "Proteins": {
+            "Total": 2.82,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 11.35,
+            "Fiber": 5.13,
+            "Sugar": 1.88,
+            "ComplexCarbs": 4.34
+        }
+    },
+    {
+        "Id": 56,
+        "Name": "Apple",
+        "Calories": 497.07,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.41,
+            "Omega3": 0.08,
+            "Omega6": 0.07,
+            "TransFat": 0.02
+        },
+        "Proteins": {
+            "Total": 0.95,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 16.5,
+            "Fiber": 6.32,
+            "Sugar": 0.05,
+            "ComplexCarbs": 10.13
+        }
+    },
+    {
+        "Id": 57,
+        "Name": "Banana",
+        "Calories": 130.9,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 1.04,
+            "Omega3": 0.18,
+            "Omega6": 0.11,
+            "TransFat": 0.04
+        },
+        "Proteins": {
+            "Total": 1.92,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 15.55,
+            "Fiber": 2.74,
+            "Sugar": 6.03,
+            "ComplexCarbs": 6.78
+        }
+    },
+    {
+        "Id": 58,
+        "Name": "Carrot",
+        "Calories": 197.82,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.62,
+            "Omega3": 0.1,
+            "Omega6": 0.17,
+            "TransFat": 0.03
+        },
+        "Proteins": {
+            "Total": 1.09,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 9.3,
+            "Fiber": 0.2,
+            "Sugar": 1.75,
+            "ComplexCarbs": 7.35
+        }
+    },
+    {
+        "Id": 59,
+        "Name": "Chicken Breast",
+        "Calories": 538.68,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 38.58,
+            "Omega3": 4.19,
+            "Omega6": 6.67,
+            "TransFat": 0.42
+        },
+        "Proteins": {
+            "Total": 28.03,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 1.01,
+            "Fiber": 0.34,
+            "Sugar": 0.22,
             "ComplexCarbs": 0.45
         }
     },
     {
-        "Id": 422,
-        "Name": "Bison",
-        "Calories": 581.89,
+        "Id": 60,
+        "Name": "Salmon",
+        "Calories": 251.64,
         "Weight": 100.0,
         "Fats": {
-            "Total": 22.79,
-            "Omega3": 3.61,
-            "Omega6": 0.48,
-            "TransFat": 3.91
+            "Total": 2.02,
+            "Omega3": 0.09,
+            "Omega6": 0.5,
+            "TransFat": 0.07
         },
         "Proteins": {
-            "Total": 15.86,
+            "Total": 17.92,
             "AminoAcids": {}
         },
         "Carbohydrates": {
+            "Total": 0.51,
+            "Fiber": 0.19,
+            "Sugar": 0.16,
+            "ComplexCarbs": 0.16
+        }
+    },
+    {
+        "Id": 61,
+        "Name": "Almonds",
+        "Calories": 418.08,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 59.08,
+            "Omega3": 1.59,
+            "Omega6": 7.27,
+            "TransFat": 1.88
+        },
+        "Proteins": {
+            "Total": 28.08,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 17.23,
+            "Fiber": 3.72,
+            "Sugar": 3.03,
+            "ComplexCarbs": 10.48
+        }
+    },
+    {
+        "Id": 62,
+        "Name": "Broccoli",
+        "Calories": 433.93,
+        "Weight": 100.0,
+        "Fats": {
             "Total": 0.86,
-            "Fiber": 0.43,
-            "Sugar": 0.36,
-            "ComplexCarbs": 0.07
-        }
-    },
-    {
-        "Id": 423,
-        "Name": "Buffalo",
-        "Calories": 128.31,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.1,
-            "Omega3": 0.01,
-            "Omega6": 0.01,
-            "TransFat": 0.0
+            "Omega3": 0.16,
+            "Omega6": 0.34,
+            "TransFat": 0.07
         },
         "Proteins": {
-            "Total": 2.39,
+            "Total": 3.61,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 6.28,
-            "Fiber": 0.07,
-            "Sugar": 1.07,
-            "ComplexCarbs": 5.14
+            "Total": 3.42,
+            "Fiber": 0.12,
+            "Sugar": 1.28,
+            "ComplexCarbs": 2.02
         }
     },
     {
-        "Id": 424,
-        "Name": "Goat Meat",
-        "Calories": 511.98,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 37.63,
-            "Omega3": 4.21,
-            "Omega6": 2.88,
-            "TransFat": 6.32
-        },
-        "Proteins": {
-            "Total": 24.36,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 0.74,
-            "Fiber": 0.06,
-            "Sugar": 0.07,
-            "ComplexCarbs": 0.61
-        }
-    },
-    {
-        "Id": 425,
-        "Name": "Soybeans",
-        "Calories": 85.8,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 1.2,
-            "Omega3": 0.23,
-            "Omega6": 0.38,
-            "TransFat": 0.23
-        },
-        "Proteins": {
-            "Total": 8.34,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 34.27,
-            "Fiber": 4.51,
-            "Sugar": 9.27,
-            "ComplexCarbs": 20.49
-        }
-    },
-    {
-        "Id": 426,
-        "Name": "Tempeh",
-        "Calories": 506.41,
+        "Id": 63,
+        "Name": "Eggs",
+        "Calories": 359.72,
         "Weight": 100.0,
         "Fats": {
             "Total": 0.83,
             "Omega3": 0.07,
-            "Omega6": 0.15,
-            "TransFat": 0.1
-        },
-        "Proteins": {
-            "Total": 4.58,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 5.84,
-            "Fiber": 0.8,
-            "Sugar": 2.45,
-            "ComplexCarbs": 2.59
-        }
-    },
-    {
-        "Id": 427,
-        "Name": "Seitan",
-        "Calories": 382.52,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.5,
-            "Omega3": 0.05,
-            "Omega6": 0.01,
-            "TransFat": 0.02
-        },
-        "Proteins": {
-            "Total": 2.65,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 7.81,
-            "Fiber": 3.13,
-            "Sugar": 0.18,
-            "ComplexCarbs": 4.5
-        }
-    },
-    {
-        "Id": 428,
-        "Name": "Wheat Germ",
-        "Calories": 142.38,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 6.75,
-            "Omega3": 1.33,
-            "Omega6": 0.06,
-            "TransFat": 1.33
-        },
-        "Proteins": {
-            "Total": 5.2,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 76.32,
-            "Fiber": 6.78,
-            "Sugar": 22.18,
-            "ComplexCarbs": 47.36
-        }
-    },
-    {
-        "Id": 429,
-        "Name": "Spirulina",
-        "Calories": 426.94,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.93,
-            "Omega3": 0.01,
-            "Omega6": 0.02,
-            "TransFat": 0.02
-        },
-        "Proteins": {
-            "Total": 1.84,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 7.33,
-            "Fiber": 2.79,
-            "Sugar": 0.6,
-            "ComplexCarbs": 3.94
-        }
-    },
-    {
-        "Id": 430,
-        "Name": "Moringa",
-        "Calories": 213.84,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.66,
-            "Omega3": 0.06,
-            "Omega6": 0.2,
-            "TransFat": 0.11
-        },
-        "Proteins": {
-            "Total": 0.92,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 3.21,
-            "Fiber": 0.97,
-            "Sugar": 0.05,
-            "ComplexCarbs": 2.19
-        }
-    },
-    {
-        "Id": 431,
-        "Name": "Baobab",
-        "Calories": 339.83,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.74,
-            "Omega3": 0.11,
-            "Omega6": 0.03,
-            "TransFat": 0.1
-        },
-        "Proteins": {
-            "Total": 1.57,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 5.05,
-            "Fiber": 1.65,
-            "Sugar": 1.56,
-            "ComplexCarbs": 1.84
-        }
-    },
-    {
-        "Id": 432,
-        "Name": "Acorns",
-        "Calories": 21.79,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 1.15,
-            "Omega3": 0.22,
-            "Omega6": 0.16,
-            "TransFat": 0.01
-        },
-        "Proteins": {
-            "Total": 14.27,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 63.63,
-            "Fiber": 2.53,
-            "Sugar": 9.52,
-            "ComplexCarbs": 51.58
-        }
-    },
-    {
-        "Id": 433,
-        "Name": "Edamame",
-        "Calories": 62.89,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.72,
-            "Omega3": 0.02,
             "Omega6": 0.08,
-            "TransFat": 0.01
-        },
-        "Proteins": {
-            "Total": 4.34,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 2.13,
-            "Fiber": 0.34,
-            "Sugar": 0.65,
-            "ComplexCarbs": 1.14
-        }
-    },
-    {
-        "Id": 434,
-        "Name": "Black Beans",
-        "Calories": 563.13,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 2.67,
-            "Omega3": 0.3,
-            "Omega6": 0.3,
-            "TransFat": 0.28
-        },
-        "Proteins": {
-            "Total": 16.95,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 24.53,
-            "Fiber": 9.24,
-            "Sugar": 6.43,
-            "ComplexCarbs": 8.86
-        }
-    },
-    {
-        "Id": 435,
-        "Name": "Navy Beans",
-        "Calories": 121.0,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 1.29,
-            "Omega3": 0.08,
-            "Omega6": 0.42,
             "TransFat": 0.02
         },
         "Proteins": {
-            "Total": 20.65,
+            "Total": 1.95,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 31.7,
-            "Fiber": 10.96,
-            "Sugar": 9.72,
-            "ComplexCarbs": 11.02
+            "Total": 3.3,
+            "Fiber": 0.24,
+            "Sugar": 0.94,
+            "ComplexCarbs": 2.12
         }
     },
     {
-        "Id": 436,
-        "Name": "Kidney Beans",
-        "Calories": 266.47,
+        "Id": 64,
+        "Name": "Milk",
+        "Calories": 591.49,
         "Weight": 100.0,
         "Fats": {
-            "Total": 3.19,
-            "Omega3": 0.41,
-            "Omega6": 0.47,
-            "TransFat": 0.62
+            "Total": 7.58,
+            "Omega3": 1.44,
+            "Omega6": 1.3,
+            "TransFat": 0.43
         },
         "Proteins": {
-            "Total": 14.82,
+            "Total": 23.85,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 37.71,
-            "Fiber": 9.88,
-            "Sugar": 11.97,
-            "ComplexCarbs": 15.86
+            "Total": 8.54,
+            "Fiber": 3.97,
+            "Sugar": 2.49,
+            "ComplexCarbs": 2.08
         }
     },
     {
-        "Id": 437,
-        "Name": "Pinto Beans",
-        "Calories": 315.15,
+        "Id": 65,
+        "Name": "Cheese",
+        "Calories": 228.05,
         "Weight": 100.0,
         "Fats": {
-            "Total": 3.68,
-            "Omega3": 0.94,
-            "Omega6": 1.04,
-            "TransFat": 0.23
+            "Total": 32.75,
+            "Omega3": 2.71,
+            "Omega6": 0.49,
+            "TransFat": 0.6
         },
         "Proteins": {
-            "Total": 24.99,
+            "Total": 23.17,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 56.43,
-            "Fiber": 28.15,
-            "Sugar": 22.48,
-            "ComplexCarbs": 5.8
+            "Total": 6.87,
+            "Fiber": 3.22,
+            "Sugar": 1.8,
+            "ComplexCarbs": 1.85
         }
     },
     {
-        "Id": 438,
-        "Name": "White Beans",
-        "Calories": 51.29,
+        "Id": 66,
+        "Name": "Lentils",
+        "Calories": 278.64,
         "Weight": 100.0,
         "Fats": {
-            "Total": 0.59,
+            "Total": 1.21,
             "Omega3": 0.1,
-            "Omega6": 0.07,
+            "Omega6": 0.48,
             "TransFat": 0.11
         },
         "Proteins": {
-            "Total": 12.6,
+            "Total": 19.69,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 25.04,
-            "Fiber": 8.33,
-            "Sugar": 8.42,
-            "ComplexCarbs": 8.29
+            "Total": 47.97,
+            "Fiber": 15.36,
+            "Sugar": 8.04,
+            "ComplexCarbs": 24.57
         }
     },
     {
-        "Id": 439,
-        "Name": "Mung Beans",
-        "Calories": 254.54,
+        "Id": 67,
+        "Name": "Rice",
+        "Calories": 361.93,
         "Weight": 100.0,
         "Fats": {
-            "Total": 1.07,
-            "Omega3": 0.1,
-            "Omega6": 0.04,
-            "TransFat": 0.2
-        },
-        "Proteins": {
-            "Total": 12.36,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 55.12,
-            "Fiber": 24.86,
-            "Sugar": 1.6,
-            "ComplexCarbs": 28.66
-        }
-    },
-    {
-        "Id": 440,
-        "Name": "Black-Eyed Peas",
-        "Calories": 516.32,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 3.52,
-            "Omega3": 0.84,
-            "Omega6": 0.39,
-            "TransFat": 0.37
-        },
-        "Proteins": {
-            "Total": 12.59,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 54.59,
-            "Fiber": 16.37,
-            "Sugar": 1.81,
-            "ComplexCarbs": 36.41
-        }
-    },
-    {
-        "Id": 441,
-        "Name": "Lima Beans",
-        "Calories": 401.32,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.61,
-            "Omega3": 0.07,
-            "Omega6": 0.19,
-            "TransFat": 0.05
-        },
-        "Proteins": {
-            "Total": 19.86,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 55.91,
-            "Fiber": 5.61,
-            "Sugar": 18.22,
-            "ComplexCarbs": 32.08
-        }
-    },
-    {
-        "Id": 442,
-        "Name": "Split Peas",
-        "Calories": 365.69,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 3.48,
-            "Omega3": 0.1,
-            "Omega6": 0.91,
-            "TransFat": 0.0
-        },
-        "Proteins": {
-            "Total": 19.68,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 24.64,
-            "Fiber": 2.2,
-            "Sugar": 10.14,
-            "ComplexCarbs": 12.3
-        }
-    },
-    {
-        "Id": 443,
-        "Name": "Green Peas",
-        "Calories": 181.41,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 1.48,
-            "Omega3": 0.07,
-            "Omega6": 0.39,
-            "TransFat": 0.09
-        },
-        "Proteins": {
-            "Total": 5.93,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 57.59,
-            "Fiber": 16.57,
-            "Sugar": 2.56,
-            "ComplexCarbs": 38.46
-        }
-    },
-    {
-        "Id": 444,
-        "Name": "Coconut Milk",
-        "Calories": 45.98,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 33.06,
-            "Omega3": 10.58,
-            "Omega6": 6.51,
-            "TransFat": 0.35
-        },
-        "Proteins": {
-            "Total": 21.92,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 12.37,
-            "Fiber": 4.57,
-            "Sugar": 1.75,
-            "ComplexCarbs": 6.05
-        }
-    },
-    {
-        "Id": 445,
-        "Name": "Cocoa Beans",
-        "Calories": 323.64,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 2.48,
-            "Omega3": 0.06,
-            "Omega6": 0.37,
-            "TransFat": 0.02
-        },
-        "Proteins": {
-            "Total": 16.66,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 43.13,
-            "Fiber": 7.8,
-            "Sugar": 4.32,
-            "ComplexCarbs": 31.01
-        }
-    },
-    {
-        "Id": 446,
-        "Name": "Dark Chocolate",
-        "Calories": 305.09,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.74,
-            "Omega3": 0.07,
-            "Omega6": 0.21,
+            "Total": 2.21,
+            "Omega3": 0.12,
+            "Omega6": 0.49,
             "TransFat": 0.07
         },
         "Proteins": {
-            "Total": 2.05,
+            "Total": 11.48,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 2.46,
-            "Fiber": 0.5,
-            "Sugar": 0.63,
-            "ComplexCarbs": 1.33
+            "Total": 65.31,
+            "Fiber": 4.26,
+            "Sugar": 1.9,
+            "ComplexCarbs": 59.15
         }
     },
     {
-        "Id": 447,
-        "Name": "Carob",
-        "Calories": 283.86,
+        "Id": 68,
+        "Name": "Oats",
+        "Calories": 194.49,
         "Weight": 100.0,
         "Fats": {
-            "Total": 0.36,
-            "Omega3": 0.0,
-            "Omega6": 0.06,
-            "TransFat": 0.06
+            "Total": 3.29,
+            "Omega3": 0.59,
+            "Omega6": 1.01,
+            "TransFat": 0.1
         },
         "Proteins": {
-            "Total": 2.48,
+            "Total": 8.29,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 9.45,
-            "Fiber": 0.06,
-            "Sugar": 0.48,
-            "ComplexCarbs": 8.91
+            "Total": 67.18,
+            "Fiber": 0.78,
+            "Sugar": 3.36,
+            "ComplexCarbs": 63.04
         }
     },
     {
-        "Id": 448,
-        "Name": "Chestnuts",
-        "Calories": 77.8,
+        "Id": 69,
+        "Name": "Beef",
+        "Calories": 419.95,
         "Weight": 100.0,
         "Fats": {
-            "Total": 54.23,
-            "Omega3": 16.58,
-            "Omega6": 15.93,
-            "TransFat": 5.24
+            "Total": 11.98,
+            "Omega3": 1.37,
+            "Omega6": 4.11,
+            "TransFat": 0.29
         },
         "Proteins": {
-            "Total": 18.26,
+            "Total": 23.9,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 18.7,
-            "Fiber": 8.82,
-            "Sugar": 9.11,
-            "ComplexCarbs": 0.77
+            "Total": 1.23,
+            "Fiber": 0.61,
+            "Sugar": 0.39,
+            "ComplexCarbs": 0.23
         }
     },
     {
-        "Id": 449,
-        "Name": "Artichokes",
-        "Calories": 135.37,
+        "Id": 70,
+        "Name": "Pork",
+        "Calories": 491.89,
         "Weight": 100.0,
         "Fats": {
-            "Total": 0.91,
-            "Omega3": 0.2,
-            "Omega6": 0.16,
-            "TransFat": 0.14
+            "Total": 39.48,
+            "Omega3": 7.46,
+            "Omega6": 0.63,
+            "TransFat": 1.17
         },
         "Proteins": {
-            "Total": 1.81,
+            "Total": 21.38,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 10.09,
-            "Fiber": 1.16,
-            "Sugar": 2.16,
-            "ComplexCarbs": 6.77
-        }
-    },
-    {
-        "Id": 450,
-        "Name": "Okra",
-        "Calories": 138.01,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.32,
-            "Omega3": 0.07,
-            "Omega6": 0.07,
-            "TransFat": 0.03
-        },
-        "Proteins": {
-            "Total": 1.84,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 5.96,
-            "Fiber": 2.44,
-            "Sugar": 1.23,
-            "ComplexCarbs": 2.29
-        }
-    },
-    {
-        "Id": 451,
-        "Name": "Bamboo Shoots",
-        "Calories": 440.37,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.21,
-            "Omega3": 0.03,
-            "Omega6": 0.03,
-            "TransFat": 0.03
-        },
-        "Proteins": {
-            "Total": 0.51,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 10.82,
-            "Fiber": 0.57,
-            "Sugar": 5.4,
-            "ComplexCarbs": 4.85
-        }
-    },
-    {
-        "Id": 452,
-        "Name": "Turnips",
-        "Calories": 591.95,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.41,
-            "Omega3": 0.04,
-            "Omega6": 0.03,
-            "TransFat": 0.03
-        },
-        "Proteins": {
-            "Total": 1.75,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 8.06,
-            "Fiber": 2.92,
-            "Sugar": 1.42,
-            "ComplexCarbs": 3.72
-        }
-    },
-    {
-        "Id": 453,
-        "Name": "Parsnips",
-        "Calories": 468.21,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.48,
-            "Omega3": 0.05,
-            "Omega6": 0.15,
-            "TransFat": 0.03
-        },
-        "Proteins": {
-            "Total": 2.85,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 9.22,
-            "Fiber": 4.18,
-            "Sugar": 3.63,
-            "ComplexCarbs": 1.41
-        }
-    },
-    {
-        "Id": 454,
-        "Name": "Celery",
-        "Calories": 585.52,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.97,
-            "Omega3": 0.0,
-            "Omega6": 0.09,
-            "TransFat": 0.11
-        },
-        "Proteins": {
-            "Total": 1.18,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 4.21,
+            "Total": 1.03,
             "Fiber": 0.18,
-            "Sugar": 0.08,
-            "ComplexCarbs": 3.95
+            "Sugar": 0.02,
+            "ComplexCarbs": 0.83
         }
     },
     {
-        "Id": 455,
-        "Name": "Rhubarb",
-        "Calories": 60.57,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.97,
-            "Omega3": 0.19,
-            "Omega6": 0.23,
-            "TransFat": 0.12
-        },
-        "Proteins": {
-            "Total": 3.26,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 9.23,
-            "Fiber": 0.07,
-            "Sugar": 1.17,
-            "ComplexCarbs": 7.99
-        }
-    },
-    {
-        "Id": 456,
-        "Name": "Fennel",
-        "Calories": 130.23,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.98,
-            "Omega3": 0.27,
-            "Omega6": 0.01,
-            "TransFat": 0.18
-        },
-        "Proteins": {
-            "Total": 1.04,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 2.7,
-            "Fiber": 0.24,
-            "Sugar": 0.67,
-            "ComplexCarbs": 1.79
-        }
-    },
-    {
-        "Id": 457,
-        "Name": "Horseradish",
-        "Calories": 573.2,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.2,
-            "Omega3": 0.04,
-            "Omega6": 0.05,
-            "TransFat": 0.01
-        },
-        "Proteins": {
-            "Total": 3.21,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 5.68,
-            "Fiber": 2.28,
-            "Sugar": 2.48,
-            "ComplexCarbs": 0.92
-        }
-    },
-    {
-        "Id": 458,
-        "Name": "Jicama",
-        "Calories": 461.44,
-        "Weight": 100.0,
-        "Fats": {
-            "Total": 0.72,
-            "Omega3": 0.18,
-            "Omega6": 0.02,
-            "TransFat": 0.14
-        },
-        "Proteins": {
-            "Total": 2.68,
-            "AminoAcids": {}
-        },
-        "Carbohydrates": {
-            "Total": 8.78,
-            "Fiber": 3.59,
-            "Sugar": 2.1,
-            "ComplexCarbs": 3.09
-        }
-    },
-    {
-        "Id": 459,
-        "Name": "Dandelion Greens",
-        "Calories": 13.92,
+        "Id": 71,
+        "Name": "Spinach",
+        "Calories": 58.16,
         "Weight": 100.0,
         "Fats": {
             "Total": 0.48,
-            "Omega3": 0.01,
-            "Omega6": 0.16,
-            "TransFat": 0.06
+            "Omega3": 0.06,
+            "Omega6": 0.11,
+            "TransFat": 0.01
         },
         "Proteins": {
             "Total": 1.97,
             "AminoAcids": {}
         },
         "Carbohydrates": {
-            "Total": 7.55,
-            "Fiber": 0.45,
-            "Sugar": 1.63,
-            "ComplexCarbs": 5.47
+            "Total": 2.18,
+            "Fiber": 1.0,
+            "Sugar": 0.79,
+            "ComplexCarbs": 0.39
+        }
+    },
+    {
+        "Id": 72,
+        "Name": "Tomato",
+        "Calories": 90.87,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.71,
+            "Omega3": 0.07,
+            "Omega6": 0.19,
+            "TransFat": 0.02
+        },
+        "Proteins": {
+            "Total": 1.87,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 9.41,
+            "Fiber": 2.48,
+            "Sugar": 1.45,
+            "ComplexCarbs": 5.48
+        }
+    },
+    {
+        "Id": 73,
+        "Name": "Cucumber",
+        "Calories": 202.79,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.29,
+            "Omega3": 0.03,
+            "Omega6": 0.02,
+            "TransFat": 0.0
+        },
+        "Proteins": {
+            "Total": 0.74,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 8.78,
+            "Fiber": 0.41,
+            "Sugar": 0.06,
+            "ComplexCarbs": 8.31
+        }
+    },
+    {
+        "Id": 74,
+        "Name": "Strawberries",
+        "Calories": 553.3,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.8,
+            "Omega3": 0.14,
+            "Omega6": 0.21,
+            "TransFat": 0.02
+        },
+        "Proteins": {
+            "Total": 3.11,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 10.13,
+            "Fiber": 1.04,
+            "Sugar": 2.4,
+            "ComplexCarbs": 6.69
+        }
+    },
+    {
+        "Id": 75,
+        "Name": "Blueberries",
+        "Calories": 192.2,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.6,
+            "Omega3": 0.1,
+            "Omega6": 0.23,
+            "TransFat": 0.04
+        },
+        "Proteins": {
+            "Total": 2.56,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 9.46,
+            "Fiber": 3.39,
+            "Sugar": 3.62,
+            "ComplexCarbs": 2.45
+        }
+    },
+    {
+        "Id": 76,
+        "Name": "Walnuts",
+        "Calories": 492.92,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 32.47,
+            "Omega3": 3.71,
+            "Omega6": 10.47,
+            "TransFat": 1.65
+        },
+        "Proteins": {
+            "Total": 21.24,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 12.65,
+            "Fiber": 3.14,
+            "Sugar": 0.72,
+            "ComplexCarbs": 8.79
+        }
+    },
+    {
+        "Id": 77,
+        "Name": "Cashews",
+        "Calories": 288.53,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 42.47,
+            "Omega3": 8.09,
+            "Omega6": 14.31,
+            "TransFat": 1.53
+        },
+        "Proteins": {
+            "Total": 15.19,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 24.99,
+            "Fiber": 4.38,
+            "Sugar": 8.32,
+            "ComplexCarbs": 12.29
+        }
+    },
+    {
+        "Id": 78,
+        "Name": "Sweet Potato",
+        "Calories": 132.43,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.39,
+            "Omega3": 0.08,
+            "Omega6": 0.06,
+            "TransFat": 0.03
+        },
+        "Proteins": {
+            "Total": 3.57,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 9.51,
+            "Fiber": 0.75,
+            "Sugar": 0.28,
+            "ComplexCarbs": 8.48
+        }
+    },
+    {
+        "Id": 79,
+        "Name": "Avocado",
+        "Calories": 106.87,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.96,
+            "Omega3": 0.11,
+            "Omega6": 0.03,
+            "TransFat": 0.09
+        },
+        "Proteins": {
+            "Total": 4.94,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 5.68,
+            "Fiber": 1.5,
+            "Sugar": 1.87,
+            "ComplexCarbs": 2.31
+        }
+    },
+    {
+        "Id": 80,
+        "Name": "Mushrooms",
+        "Calories": 497.74,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.53,
+            "Omega3": 0.06,
+            "Omega6": 0.12,
+            "TransFat": 0.0
+        },
+        "Proteins": {
+            "Total": 1.87,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 7.57,
+            "Fiber": 3.2,
+            "Sugar": 0.17,
+            "ComplexCarbs": 4.2
+        }
+    },
+    {
+        "Id": 81,
+        "Name": "Onions",
+        "Calories": 305.49,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.42,
+            "Omega3": 0.07,
+            "Omega6": 0.08,
+            "TransFat": 0.04
+        },
+        "Proteins": {
+            "Total": 3.5,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 7.58,
+            "Fiber": 0.44,
+            "Sugar": 3.01,
+            "ComplexCarbs": 4.13
+        }
+    },
+    {
+        "Id": 82,
+        "Name": "Garlic",
+        "Calories": 35.37,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.7,
+            "Omega3": 0.12,
+            "Omega6": 0.22,
+            "TransFat": 0.05
+        },
+        "Proteins": {
+            "Total": 2.52,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 6.1,
+            "Fiber": 0.66,
+            "Sugar": 0.15,
+            "ComplexCarbs": 5.29
+        }
+    },
+    {
+        "Id": 83,
+        "Name": "Peanuts",
+        "Calories": 17.75,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 38.02,
+            "Omega3": 7.07,
+            "Omega6": 9.01,
+            "TransFat": 1.18
+        },
+        "Proteins": {
+            "Total": 18.24,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 13.59,
+            "Fiber": 1.5,
+            "Sugar": 5.41,
+            "ComplexCarbs": 6.68
+        }
+    },
+    {
+        "Id": 84,
+        "Name": "Yogurt",
+        "Calories": 554.12,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 4.12,
+            "Omega3": 0.63,
+            "Omega6": 1.11,
+            "TransFat": 0.01
+        },
+        "Proteins": {
+            "Total": 11.41,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 9.18,
+            "Fiber": 1.23,
+            "Sugar": 3.53,
+            "ComplexCarbs": 4.42
+        }
+    },
+    {
+        "Id": 85,
+        "Name": "Tofu",
+        "Calories": 20.86,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.32,
+            "Omega3": 0.01,
+            "Omega6": 0.05,
+            "TransFat": 0.02
+        },
+        "Proteins": {
+            "Total": 4.61,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 4.61,
+            "Fiber": 0.08,
+            "Sugar": 1.57,
+            "ComplexCarbs": 2.96
+        }
+    },
+    {
+        "Id": 86,
+        "Name": "Chickpeas",
+        "Calories": 318.53,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 4.92,
+            "Omega3": 0.45,
+            "Omega6": 1.42,
+            "TransFat": 0.34
+        },
+        "Proteins": {
+            "Total": 24.01,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 42.49,
+            "Fiber": 19.52,
+            "Sugar": 0.64,
+            "ComplexCarbs": 22.33
+        }
+    },
+    {
+        "Id": 87,
+        "Name": "Quinoa",
+        "Calories": 592.0,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 4.46,
+            "Omega3": 0.08,
+            "Omega6": 0.24,
+            "TransFat": 0.31
+        },
+        "Proteins": {
+            "Total": 6.69,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 61.44,
+            "Fiber": 12.15,
+            "Sugar": 13.25,
+            "ComplexCarbs": 36.04
+        }
+    },
+    {
+        "Id": 88,
+        "Name": "Chia Seeds",
+        "Calories": 597.47,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 53.65,
+            "Omega3": 2.07,
+            "Omega6": 2.94,
+            "TransFat": 2.88
+        },
+        "Proteins": {
+            "Total": 26.87,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 12.27,
+            "Fiber": 4.93,
+            "Sugar": 0.03,
+            "ComplexCarbs": 7.31
+        }
+    },
+    {
+        "Id": 89,
+        "Name": "Flaxseeds",
+        "Calories": 76.43,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 54.36,
+            "Omega3": 10.75,
+            "Omega6": 20.96,
+            "TransFat": 4.07
+        },
+        "Proteins": {
+            "Total": 18.93,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 23.38,
+            "Fiber": 8.01,
+            "Sugar": 9.15,
+            "ComplexCarbs": 6.22
+        }
+    },
+    {
+        "Id": 90,
+        "Name": "Pumpkin Seeds",
+        "Calories": 481.97,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 59.23,
+            "Omega3": 7.38,
+            "Omega6": 7.35,
+            "TransFat": 5.2
+        },
+        "Proteins": {
+            "Total": 14.45,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 21.73,
+            "Fiber": 2.67,
+            "Sugar": 7.08,
+            "ComplexCarbs": 11.98
+        }
+    },
+    {
+        "Id": 91,
+        "Name": "Sunflower Seeds",
+        "Calories": 507.09,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 52.66,
+            "Omega3": 2.71,
+            "Omega6": 18.83,
+            "TransFat": 3.57
+        },
+        "Proteins": {
+            "Total": 23.76,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 20.3,
+            "Fiber": 0.71,
+            "Sugar": 5.98,
+            "ComplexCarbs": 13.61
+        }
+    },
+    {
+        "Id": 92,
+        "Name": "Coconut",
+        "Calories": 39.98,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 35.66,
+            "Omega3": 1.87,
+            "Omega6": 4.78,
+            "TransFat": 0.89
+        },
+        "Proteins": {
+            "Total": 28.29,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 18.02,
+            "Fiber": 2.84,
+            "Sugar": 6.66,
+            "ComplexCarbs": 8.52
+        }
+    },
+    {
+        "Id": 93,
+        "Name": "Pineapple",
+        "Calories": 383.05,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 1.37,
+            "Omega3": 0.06,
+            "Omega6": 0.17,
+            "TransFat": 0.08
+        },
+        "Proteins": {
+            "Total": 1.37,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 16.28,
+            "Fiber": 6.06,
+            "Sugar": 3.91,
+            "ComplexCarbs": 6.31
+        }
+    },
+    {
+        "Id": 94,
+        "Name": "Mango",
+        "Calories": 399.68,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.68,
+            "Omega3": 0.06,
+            "Omega6": 0.24,
+            "TransFat": 0.01
+        },
+        "Proteins": {
+            "Total": 2.32,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 24.01,
+            "Fiber": 7.09,
+            "Sugar": 4.57,
+            "ComplexCarbs": 12.35
+        }
+    },
+    {
+        "Id": 95,
+        "Name": "Peach",
+        "Calories": 300.92,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 4.89,
+            "Omega3": 0.05,
+            "Omega6": 0.88,
+            "TransFat": 0.33
+        },
+        "Proteins": {
+            "Total": 6.67,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 43.16,
+            "Fiber": 4.79,
+            "Sugar": 9.34,
+            "ComplexCarbs": 29.03
+        }
+    },
+    {
+        "Id": 96,
+        "Name": "Pear",
+        "Calories": 267.78,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 1.11,
+            "Omega3": 0.16,
+            "Omega6": 0.09,
+            "TransFat": 0.09
+        },
+        "Proteins": {
+            "Total": 0.36,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 13.35,
+            "Fiber": 1.26,
+            "Sugar": 3.67,
+            "ComplexCarbs": 8.42
+        }
+    },
+    {
+        "Id": 97,
+        "Name": "Grapes",
+        "Calories": 245.54,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 1.44,
+            "Omega3": 0.05,
+            "Omega6": 0.15,
+            "TransFat": 0.14
+        },
+        "Proteins": {
+            "Total": 1.49,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 16.8,
+            "Fiber": 7.59,
+            "Sugar": 1.04,
+            "ComplexCarbs": 8.17
+        }
+    },
+    {
+        "Id": 98,
+        "Name": "Zucchini",
+        "Calories": 127.88,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.53,
+            "Omega3": 0.01,
+            "Omega6": 0.09,
+            "TransFat": 0.02
+        },
+        "Proteins": {
+            "Total": 0.59,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 11.34,
+            "Fiber": 1.48,
+            "Sugar": 0.42,
+            "ComplexCarbs": 9.44
+        }
+    },
+    {
+        "Id": 99,
+        "Name": "Bell Peppers",
+        "Calories": 554.43,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.41,
+            "Omega3": 0.02,
+            "Omega6": 0.02,
+            "TransFat": 0.02
+        },
+        "Proteins": {
+            "Total": 2.41,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 10.62,
+            "Fiber": 1.01,
+            "Sugar": 2.59,
+            "ComplexCarbs": 7.02
+        }
+    },
+    {
+        "Id": 100,
+        "Name": "Eggplant",
+        "Calories": 592.68,
+        "Weight": 100.0,
+        "Fats": {
+            "Total": 0.12,
+            "Omega3": 0.0,
+            "Omega6": 0.03,
+            "TransFat": 0.0
+        },
+        "Proteins": {
+            "Total": 3.01,
+            "AminoAcids": {}
+        },
+        "Carbohydrates": {
+            "Total": 11.66,
+            "Fiber": 1.38,
+            "Sugar": 2.99,
+            "ComplexCarbs": 7.29
         }
     }
 ]
