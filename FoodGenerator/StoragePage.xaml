@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:FoodGenerator.ViewModels"
+             x:Class="FoodGenerator.StoragePage"
+             Title="StoragePage">    
+
+    <Grid RowDefinitions="*,Auto">
+        <!-- Storage Items List -->
+        <CollectionView Grid.Row="0" ItemsSource="{Binding StorageItems}">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" Span="2" 
+                               VerticalItemSpacing="10" HorizontalItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="0" CornerRadius="24" HasShadow="True" 
+                         BackgroundColor="White" HeightRequest="100">
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <Label Text="{Binding Name}" 
+                                 FontSize="16" FontAttributes="Bold"
+                                 HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                            <Label Grid.Row="1" Text="{Binding Weight, StringFormat='{0}g'}"
+                                 FontSize="14" HorizontalOptions="Center"
+                                 TextColor="Gray"/>
+
+                            <Button Text="×" CornerRadius="12" Padding="0"
+                                  BackgroundColor="#FF4757" TextColor="White"
+                                  HorizontalOptions="End" VerticalOptions="Start"
+                                  Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:StorageViewModel}}, Path=DeleteStorageItemCommand}"
+                                  CommandParameter="{Binding .}"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Add Button -->
+        <Button Grid.Row="1" Text="➕ Add Item" Margin="20" 
+                BackgroundColor="#6C5CE7" HorizontalOptions="End"
+                Clicked="OnAddClicked">
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#A363F9" Offset="0.1"/>
+                    <GradientStop Color="#6C5CE7" Offset="0.9"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</ContentPage>

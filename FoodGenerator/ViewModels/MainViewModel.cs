@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using NutritionApp.Data.Data;
 using NutritionApp.Data.Models;
 using System.Collections.ObjectModel;
+using System.Text.Json;
+using System.Xml.Serialization;
 
 namespace FoodGenerator.ViewModels;
 
@@ -58,5 +60,67 @@ public partial class MainViewModel : ObservableObject
     ~MainViewModel()
     {
         MessagingCenter.Unsubscribe<AddEditPage>(this, "RefreshFoodList");
+    }
+
+    [RelayCommand]
+    private async Task Import()
+    {
+        try
+        {
+            // 1. Read JSON file
+            using var stream = await FileSystem.OpenAppPackageFileAsync("FoodItems.json");
+            using var reader = new StreamReader(stream);
+            var jsonContent = await reader.ReadToEndAsync();
+
+            // 2. Deserialize JSON
+            var foodItems = JsonSerializer.Deserialize<List<FoodItem>>(jsonContent);
+
+            // 3. Save to database
+            await _context.Database.EnsureCreatedAsync();
+            await _context.FoodItems.AddRangeAsync(foodItems);
+            await _context.SaveChangesAsync();
+
+            // 4. Refresh UI
+            LoadFoodItems();
+
+            await Shell.Current.DisplayAlert("Success",
+                $"Imported {foodItems.Count} food items", "OK");
+        }
+        catch (Exception ex)
+        {
+            await Shell.Current.DisplayAlert("Error",
+                $"Import failed: {ex.Message}", "OK");
+        }
+    }
+
+    [RelayCommand]
+    private async Task DeleteFoodItems()
+    {
+        try
+        {
+            // Confirm deletion with the user
+            bool confirm = await Shell.Current.DisplayAlert(
+                "Delete Food Items",
+                "Are you sure you want to delete all food items? This action cannot be undone.",
+                "Yes", "No");
+
+            if (confirm)
+            {
+                // Delete all entries in the FoodItems table
+                var allFoodItems = await _context.FoodItems.ToListAsync();
+                _context.FoodItems.RemoveRange(allFoodItems);
+                await _context.SaveChangesAsync();
+
+                // Notify the user
+                await Shell.Current.DisplayAlert("Success", "All food items deleted successfully.", "OK");
+
+                // Refresh the UI (if needed)
+                LoadFoodItems(); // Assuming this method refreshes your UI
+            }
+        }
+        catch (Exception ex)
+        {
+            await Shell.Current.DisplayAlert("Error", $"Failed to delete food items: {ex.Message}", "OK");
+        }
     }
 }

@@ -22,7 +22,7 @@ namespace NutritionApp.Data.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Calories = table.Column<int>(type: "int", nullable: false),
+                    Calories = table.Column<double>(type: "double", nullable: false),
                     Fats_Total = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
                     Fats_Omega3 = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
                     Fats_Omega6 = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
@@ -39,6 +39,22 @@ namespace NutritionApp.Data.Migrations
                     table.PrimaryKey("PK_FoodItems", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "StorageItems",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Weight = table.Column<double>(type: "double", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_StorageItems", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
         }
 
         /// <inheritdoc />
@@ -46,6 +62,9 @@ namespace NutritionApp.Data.Migrations
         {
             migrationBuilder.DropTable(
                 name: "FoodItems");
+
+            migrationBuilder.DropTable(
+                name: "StorageItems");
         }
     }
 }

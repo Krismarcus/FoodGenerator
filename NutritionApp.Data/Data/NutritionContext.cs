@@ -11,6 +11,7 @@ namespace NutritionApp.Data.Data
     public class NutritionContext : DbContext
     {
         public DbSet<FoodItem> FoodItems { get; set; }
+        public DbSet<StorageItem> StorageItems { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -33,6 +34,12 @@ namespace NutritionApp.Data.Data
                 entity.OwnsOne(e => e.Fats);
                 entity.OwnsOne(e => e.Proteins);
                 entity.OwnsOne(e => e.Carbohydrates);
+            });
+
+            modelBuilder.Entity<StorageItem>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.Name).IsRequired();                
             });
         }
 

@@ -79,5 +79,9 @@ namespace FoodGenerator
             base.OnDisappearing();
             MessagingCenter.Unsubscribe<AddEditPage>(this, "RefreshFoodList");
         }
+        private async void OnStorageClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new StoragePage());
+        }
     }
 }

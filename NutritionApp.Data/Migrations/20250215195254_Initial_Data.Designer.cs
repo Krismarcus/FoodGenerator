@@ -11,7 +11,7 @@ using NutritionApp.Data.Data;
 namespace NutritionApp.Data.Migrations
 {
     [DbContext(typeof(NutritionContext))]
-    [Migration("20250215164524_Initial_Data")]
+    [Migration("20250215195254_Initial_Data")]
     partial class Initial_Data
     {
         /// <inheritdoc />
@@ -32,8 +32,8 @@ namespace NutritionApp.Data.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Calories")
-                        .HasColumnType("int");
+                    b.Property<double>("Calories")
+                        .HasColumnType("double");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -45,6 +45,26 @@ namespace NutritionApp.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("FoodItems");
+                });
+
+            modelBuilder.Entity("NutritionApp.Data.Models.StorageItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<double>("Weight")
+                        .HasColumnType("double");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("StorageItems");
                 });
 
             modelBuilder.Entity("NutritionApp.Data.Models.FoodItem", b =>
