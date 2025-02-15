@@ -17,7 +17,9 @@ public partial class AddEditPage : ContentPage
         {
             Fats = new Fats(),
             Proteins = new Proteins(),
-            Carbohydrates = new Carbohydrates()
+            Carbohydrates = new Carbohydrates(),
+            Calories = 0,
+            Weight = 100
         };
 
         // Set the BindingContext to the FoodItem

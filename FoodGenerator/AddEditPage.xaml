@@ -2,11 +2,15 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FoodGenerator.AddEditPage"
-             Title="AddEditPage">
+             xmlns:model="clr-namespace:NutritionApp.Data.Models;assembly=NutritionApp.Data"
+             Title="AddEditPage"
+             x:DataType="model:FoodItem">
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="10">
             <!-- Food Name -->
             <Entry Placeholder="Food Name" Text="{Binding Name}" />
+            <Entry Placeholder="Calories" Text="{Binding Calories}"/>
+            <Entry Placeholder="Weight" Text="{Binding Weight}"/>
 
             <!-- Fats -->
             <Frame Padding="10" Margin="0,10">

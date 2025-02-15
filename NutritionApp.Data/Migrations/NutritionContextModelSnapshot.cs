@@ -29,9 +29,15 @@ namespace NutritionApp.Data.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("Calories")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("longtext");
+
+                    b.Property<double>("Weight")
+                        .HasColumnType("double");
 
                     b.HasKey("Id");
 

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:microcharts="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
              xmlns:converters="clr-namespace:FoodGenerator.Converters"
              xmlns:viewmodel="clr-namespace:FoodGenerator.ViewModels"
              x:Class="FoodGenerator.MainPage"
@@ -13,253 +12,163 @@
     </ContentPage.BindingContext>
 
     <ContentPage.Resources>
-        <ResourceDictionary>
-            <converters:NutrientToChartConverter x:Key="NutrientToChartConverter" />
-
-            <Style TargetType="Label" x:Key="NutrientLabel">
-                <Setter Property="FontSize" Value="14" />
-                <Setter Property="TextColor" Value="#333333" />
-                <Setter Property="FontFamily" Value="ChildishRegular" />
-            </Style>
-
-            <Style TargetType="Button" x:Key="PlayfulButton">
-                <Setter Property="CornerRadius" Value="20" />
-                <Setter Property="TextColor" Value="White" />
-                <Setter Property="FontAttributes" Value="Bold" />
-                <Setter Property="FontSize" Value="16" />
-                <Setter Property="Padding" Value="24,12" />
-                <Setter Property="VisualStateManager.VisualStateGroups">
-                    <VisualStateGroupList>
-                        <VisualStateGroup x:Name="CommonStates">
-                            <VisualState x:Name="Normal">
-                                <VisualState.Setters>
-                                    <Setter Property="Scale" Value="1" />
-                                </VisualState.Setters>
-                            </VisualState>
-                            <VisualState x:Name="Pressed">
-                                <VisualState.Setters>
-                                    <Setter Property="Scale" Value="0.95" />
-                                </VisualState.Setters>
-                            </VisualState>
-                        </VisualStateGroup>
-                    </VisualStateGroupList>
-                </Setter>
-            </Style>
+        <ResourceDictionary>            
+            <converters:MacronutrientToAnimatedBrushConverter x:Key="AnimatedMacronutrientConverter"/>            
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
+    <Grid RowDefinitions="*,Auto" RowSpacing="0">
+        <!-- Food Items Collection -->
+        <CollectionView Grid.Row="0"
+                        ItemsSource="{Binding FoodItems}"
+                        Margin="10"
+                        SelectionMode="None">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                                Span="3" 
+                                VerticalItemSpacing="10"
+                                HorizontalItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
 
-        <!-- Replace CollectionView with FlexLayout -->
-        <FlexLayout Grid.Row="0"
-                BindableLayout.ItemsSource="{Binding FoodItems}"
-                Wrap="Wrap"
-                JustifyContent="Start"
-                AlignItems="Start"
-                Direction="Row"
-                Margin="5,5">
-            <BindableLayout.ItemTemplate>
+            <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Frame Padding="0" 
-                       Margin="8" 
-                       CornerRadius="24"
-                       HasShadow="True"
-                       BackgroundColor="Transparent"
-                       WidthRequest="220">
-                        <!-- Set the desired width for each frame -->
-                        <Frame CornerRadius="24"
-                           BackgroundColor="White"
-                           Padding="0">
-                            <Frame.Background>
-                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                                    <GradientStop Color="#76b5c5" Offset="0.1"/>
-                                    <GradientStop Color="#FF7F50" Offset="0.9"/>
-                                </LinearGradientBrush>
-                            </Frame.Background>
+                         CornerRadius="24"
+                         HasShadow="True"
+                         BackgroundColor="White"
+                         >
+                        <Grid RowDefinitions="Auto,*,Auto">
+                            <!-- Header with Gradient Background -->
+                            <BoxView Grid.RowSpan="3"
+                                   CornerRadius="24">
+                                <BoxView.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                        <GradientStop Color="LightSkyBlue" Offset="0.1"/>
+                                        <GradientStop Color="Chocolate" Offset="0.9"/>
+                                    </LinearGradientBrush>
+                                </BoxView.Background>
+                            </BoxView>
 
-                            <Grid Padding="20" RowSpacing="12">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
-
-                                <!-- Header -->
-                                <Grid Grid.Row="0" ColumnDefinitions="*,*,*" >
-                                
-                                <microcharts:ChartView Grid.Row="0" HeightRequest="100" 
-                              WidthRequest="100"
-                              HorizontalOptions="Center"
-                              BackgroundColor="Transparent">
-                                    <microcharts:ChartView.Chart>
-                                        <Binding Path="." Converter="{StaticResource NutrientToChartConverter}"/>
-                                    </microcharts:ChartView.Chart>
-                                </microcharts:ChartView>
-                                <!-- Centered Food Name -->
+                            <!-- Top Row: Name & Delete Button -->
+                            <Grid Grid.Row="0" ColumnDefinitions="*,Auto" Padding="10">
                                 <Label Text="{Binding Name}"
-                                    Grid.Row="0"
-                                    FontSize="14"
-                                    FontAttributes="Bold"
-                                    TextColor="#333333"
-                                    HorizontalOptions="Center"
-                                    VerticalOptions="Center"
-                                    BackgroundColor="Transparent"/>
-                                <Button Text="×"
-                                              Grid.Column="2"
-                                              BackgroundColor="#FF4757"
-                                              HorizontalOptions="End"
-                                              VerticalOptions="Start"
-                                              WidthRequest="12"
-                                              HeightRequest="12"
-                                              CornerRadius="16"
-                                              Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MainViewModel}}, Path=DeleteFoodCommand}"
-                                              CommandParameter="{Binding .}"/>
-                                </Grid>
-                                <!-- Nutrient Blocks -->
-                                <Grid Grid.Row="1" 
-                                  ColumnDefinitions="*,*,*"
-                                  ColumnSpacing="15">
-                                    <!-- Fats Block -->
-                                    <Frame CornerRadius="16"
+                                       Grid.Column="0"
                                        HorizontalOptions="Center"
-                                       BackgroundColor="#FF9F43"
-                                       Padding="10">
-                                        <VerticalStackLayout Spacing="8">
-                                            <HorizontalStackLayout Spacing="8">
-                                                <Label Text="🥑" FontSize="20"/>                                                
-                                            </HorizontalStackLayout>
-                                            <Label Text="{Binding Fats.Total, StringFormat='{0:F2}g'}" 
-                                               FontSize="10"
-                                               TextColor="White"
-                                               FontAttributes="Bold"/>
-                                        </VerticalStackLayout>
-                                    </Frame>
-
-                                    <!-- Proteins Block -->
-                                    <Frame Grid.Column="1"
-                                       HorizontalOptions="Center"
-                                       CornerRadius="16"
-                                       BackgroundColor="#6C5CE7"
-                                       Padding="10">
-                                        <VerticalStackLayout Spacing="8">
-                                            <HorizontalStackLayout Spacing="8">
-                                                <Label Text="🍗" FontSize="20"/>                                                
-                                            </HorizontalStackLayout>
-                                            <Label Text="{Binding Proteins.Total, StringFormat='{0:F2}g'}" 
-                                               FontSize="10"
-                                               TextColor="White"
-                                               FontAttributes="Bold"/>
-                                        </VerticalStackLayout>
-                                    </Frame>
-
-                                    <!-- Carbs Block -->
-                                    <Frame Grid.Column="2"
-                                       HorizontalOptions="Center"
-                                       CornerRadius="16"
-                                       BackgroundColor="#00B894"
-                                       Padding="10">
-                                        <VerticalStackLayout Spacing="8">
-                                            <HorizontalStackLayout Spacing="8">
-                                                <Label Text="🍞" FontSize="20"/>                                                
-                                            </HorizontalStackLayout>
-                                            <Label Text="{Binding Carbohydrates.Total, StringFormat='{0:F2}g'}" 
-                                               FontSize="10"
-                                               TextColor="White"
-                                               FontAttributes="Bold"/>
-                                        </VerticalStackLayout>
-                                    </Frame>
-                                </Grid>
-
-                                <!-- Details Section -->
-                                <Grid Grid.Row="2" 
-                                  ColumnDefinitions="*,*"
-                                  ColumnSpacing="15"
-                                  Margin="0,15,0,0">
-                                    <!-- Left Column -->
-                                    <VerticalStackLayout Spacing="10">
-                                        <!-- Omega-3 -->
-                                        <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10">
-                                            <Label Text="🐟" FontSize="16" VerticalOptions="Center"/>
-                                            <VerticalStackLayout Grid.Column="1">
-                                                <Label Text="Omega-3" 
-                                                   FontSize="12"
-                                                   TextColor="#666666"
-                                                   FontAttributes="Bold"/>
-                                                <Label Text="{Binding Fats.Omega3, StringFormat='{0:F2}g'}" 
-                                                   FontSize="14"
-                                                   TextColor="#444444"
-                                                   FontAttributes="Bold"/>
-                                            </VerticalStackLayout>
-                                        </Grid>
-
-                                        <!-- Omega-6 -->
-                                        <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10">
-                                            <Label Text="🌻" FontSize="16" VerticalOptions="Center"/>
-                                            <VerticalStackLayout Grid.Column="1">
-                                                <Label Text="Omega-6" 
-                                                   FontSize="12"
-                                                   TextColor="#666666"
-                                                   FontAttributes="Bold"/>
-                                                <Label Text="{Binding Fats.Omega6, StringFormat='{0:F2}g'}" 
-                                                   FontSize="14"
-                                                   TextColor="#444444"
-                                                   FontAttributes="Bold"/>
-                                            </VerticalStackLayout>
-                                        </Grid>
-                                    </VerticalStackLayout>
-
-                                    <!-- Right Column -->
-                                    <VerticalStackLayout Grid.Column="1" Spacing="10">
-                                        <!-- Fiber -->
-                                        <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10">
-                                            <Label Text="🥦" FontSize="16" VerticalOptions="Center"/>
-                                            <VerticalStackLayout Grid.Column="1">
-                                                <Label Text="Fiber" 
-                                                   FontSize="12"
-                                                   TextColor="#666666"
-                                                   FontAttributes="Bold"/>
-                                                <Label Text="{Binding Carbohydrates.Fiber, StringFormat='{0:F2}g'}" 
-                                                   FontSize="14"
-                                                   TextColor="#444444"
-                                                   FontAttributes="Bold"/>
-                                            </VerticalStackLayout>
-                                        </Grid>
-
-                                        <!-- Sugar -->
-                                        <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10">
-                                            <Label Text="🍭" FontSize="16" VerticalOptions="Center"/>
-                                            <VerticalStackLayout Grid.Column="1">
-                                                <Label Text="Sugar" 
-                                                   FontSize="12"
-                                                   TextColor="#666666"
-                                                   FontAttributes="Bold"/>
-                                                <Label Text="{Binding Carbohydrates.Sugar, StringFormat='{0:F2}g'}" 
-                                                   FontSize="14"
-                                                   TextColor="#444444"
-                                                   FontAttributes="Bold"/>
-                                            </VerticalStackLayout>
-                                        </Grid>
-                                    </VerticalStackLayout>
-                                </Grid>
+                                       FontSize="12"
+                                       FontAttributes="Bold"
+                                       TextColor="WhiteSmoke"
+                                       VerticalOptions="Center"/>
+                                <Button Text="×"                                        
+                                        Grid.Column="1"
+                                        HorizontalOptions="End"
+                                        VerticalOptions="Start"
+                                        BackgroundColor="#FF4757"                                      
+                                        FontSize="10"
+                                        CornerRadius="12"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MainViewModel}}, Path=DeleteFoodCommand}"
+                                        CommandParameter="{Binding .}"/>
                             </Grid>
-                        </Frame>
+
+                            <!-- Middle Row: Nutrient Blocks -->
+                            <Grid Grid.Row="1" 
+                                ColumnDefinitions="*,*,*"
+                                ColumnSpacing="4"
+                                Padding="5">
+                                <!-- Fats -->
+                                <Frame CornerRadius="16"
+                                     BorderColor="Transparent"
+                                     BackgroundColor="#FF9F43"
+                                     Padding="8">
+                                    <VerticalStackLayout Spacing="4">
+                                        <Label Text="🥑" FontSize="10" HorizontalOptions="Center"/>
+                                        <Label Text="{Binding Fats.Total, StringFormat='{0:F2}g'}" 
+                                             FontSize="8"
+                                             TextColor="White"
+                                             HorizontalOptions="Center"/>
+                                    </VerticalStackLayout>
+                                </Frame>
+
+                                <!-- Proteins -->
+                                <Frame Grid.Column="1"
+                                     CornerRadius="16"
+                                     BackgroundColor="#6C5CE7"
+                                     BorderColor="Transparent"
+                                     Padding="8">
+                                    <VerticalStackLayout Spacing="4">
+                                        <Label Text="🍗" FontSize="10" HorizontalOptions="Center"/>
+                                        <Label Text="{Binding Proteins.Total, StringFormat='{0:F2}g'}" 
+                                             FontSize="8"
+                                             TextColor="White"
+                                             HorizontalOptions="Center"/>
+                                    </VerticalStackLayout>
+                                </Frame>
+
+                                <!-- Carbs -->
+                                <Frame Grid.Column="2"
+                                     CornerRadius="16"
+                                     BackgroundColor="#00B894"
+                                     BorderColor="Transparent"
+                                     Padding="8">
+                                    <VerticalStackLayout Spacing="4">
+                                        <Label Text="🍞" FontSize="10" HorizontalOptions="Center"/>
+                                        <Label Text="{Binding Carbohydrates.Total, StringFormat='{0:F2}g'}" 
+                                             FontSize="8"
+                                             TextColor="White"
+                                             HorizontalOptions="Center"/>
+                                    </VerticalStackLayout>
+                                </Frame>
+                            </Grid>
+
+                            <!-- Bottom Row: Detailed Nutrients -->
+                            <Grid Grid.Row="2" 
+                                ColumnDefinitions="*,*"
+                                Padding="10,5">
+                                <!-- Left Column -->
+                                <VerticalStackLayout Spacing="6" HorizontalOptions="Center">
+                                    <HorizontalStackLayout Spacing="5">
+                                        <Label Text="🐟" FontSize="12" VerticalOptions="Center"/>
+                                        <Label Text="{Binding Fats.Omega3, StringFormat='{0:F2}g'}"
+                                             VerticalOptions="Center"
+                                             FontSize="8"
+                                             TextColor="#444444"/>
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout Spacing="5">
+                                        <Label Text="🌻" FontSize="12"/>
+                                        <Label Text="{Binding Fats.Omega6, StringFormat='{0:F2}g'}" 
+                                             FontSize="8"
+                                             TextColor="#444444"/>
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+
+                                <!-- Right Column -->
+                                <VerticalStackLayout Grid.Column="1" Spacing="6" HorizontalOptions="Center">
+                                    <HorizontalStackLayout Spacing="5">
+                                        <Label Text="🥦" FontSize="12"/>
+                                        <Label Text="{Binding Carbohydrates.Fiber, StringFormat='{0:F2}g'}" 
+                                             FontSize="8"
+                                             TextColor="#444444"/>
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout Spacing="5">
+                                        <Label Text="🍭" FontSize="12"/>
+                                        <Label Text="{Binding Carbohydrates.Sugar, StringFormat='{0:F2}g'}" 
+                                             FontSize="8"
+                                             TextColor="#444444"/>
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Grid>
                     </Frame>
                 </DataTemplate>
-            </BindableLayout.ItemTemplate>
-        </FlexLayout>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
 
         <!-- Add Button -->
         <Button Grid.Row="1"
-            Text="➕ Add Food"
-            Style="{StaticResource PlayfulButton}"
-            Margin="20"
-            BackgroundColor="#6C5CE7"
-            HorizontalOptions="End"
-            Clicked="OnAddClicked">
+                Text="➕ Add Food"                
+                Margin="20"
+                BackgroundColor="#6C5CE7"
+                HorizontalOptions="End"
+                Clicked="OnAddClicked">
             <Button.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="#A363F9" Offset="0.1"/>

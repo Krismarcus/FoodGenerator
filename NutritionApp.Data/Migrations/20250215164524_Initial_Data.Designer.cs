@@ -11,8 +11,8 @@ using NutritionApp.Data.Data;
 namespace NutritionApp.Data.Migrations
 {
     [DbContext(typeof(NutritionContext))]
-    [Migration("20250213155945_InitialData")]
-    partial class InitialData
+    [Migration("20250215164524_Initial_Data")]
+    partial class Initial_Data
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,9 +32,15 @@ namespace NutritionApp.Data.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("Calories")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("longtext");
+
+                    b.Property<double>("Weight")
+                        .HasColumnType("double");
 
                     b.HasKey("Id");
 

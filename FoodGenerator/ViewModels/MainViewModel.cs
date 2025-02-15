@@ -32,7 +32,7 @@ public partial class MainViewModel : ObservableObject
         var items = _context.FoodItems
             .Include(f => f.Fats)
             .Include(f => f.Proteins)
-            .Include(f => f.Carbohydrates)
+            .Include(f => f.Carbohydrates)            
             .ToList();
 
         FoodItems.Clear();

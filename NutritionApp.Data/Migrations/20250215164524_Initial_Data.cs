@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace NutritionApp.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialData : Migration
+    public partial class Initial_Data : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -22,6 +22,7 @@ namespace NutritionApp.Data.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
+                    Calories = table.Column<int>(type: "int", nullable: false),
                     Fats_Total = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
                     Fats_Omega3 = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
                     Fats_Omega6 = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
@@ -30,7 +31,8 @@ namespace NutritionApp.Data.Migrations
                     Carbohydrates_Total = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
                     Carbohydrates_Fiber = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
                     Carbohydrates_Sugar = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
-                    Carbohydrates_ComplexCarbs = table.Column<decimal>(type: "decimal(65,30)", nullable: false)
+                    Carbohydrates_ComplexCarbs = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
+                    Weight = table.Column<double>(type: "double", nullable: false)
                 },
                 constraints: table =>
                 {

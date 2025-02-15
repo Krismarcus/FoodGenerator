@@ -10,8 +10,10 @@ namespace NutritionApp.Data.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public int Calories { get; set; }
         public Fats Fats { get; set; } = new();
         public Proteins Proteins { get; set; } = new();
         public Carbohydrates Carbohydrates { get; set; } = new();
+        public double Weight { get; set; }
     }
 }
