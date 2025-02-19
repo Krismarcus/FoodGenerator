@@ -29,7 +29,7 @@ namespace FoodGenerator.ViewModels
                 using (var context = new NutritionContext()) // Create a new context
                 {
                     var items = await context.FoodRecipes
-                                             .Include(r => r.FoodItems)
+                                             .Include(r => r.FoodRecipeItems)
                                              .ToListAsync()
                                              .ConfigureAwait(false);
 
@@ -45,22 +45,32 @@ namespace FoodGenerator.ViewModels
         [RelayCommand]
         private async Task DeleteRecipeItem(FoodRecipe item)
         {
-            bool confirm = await Shell.Current.DisplayAlert("Delete Item", $"Delete {item.RecipeName}?", "Yes", "No");
-            if (confirm)
+            if (item == null) return;
+
+            bool confirm = await Shell.Current.DisplayAlert("Delete Recipe", $"Are you sure you want to delete {item.RecipeName}?", "Yes", "No");
+            if (!confirm) return;
+
+            try
             {
-                try
+                using (var context = new NutritionContext())
                 {
-                    using (var context = new NutritionContext()) // Create a new context
+                    var recipeToDelete = context.FoodRecipes
+                        .Include(r => r.FoodRecipeItems) // ✅ Ensure FoodRecipeItems are loaded
+                        .FirstOrDefault(r => r.Id == item.Id);
+
+                    if (recipeToDelete != null)
                     {
-                        context.FoodRecipes.Remove(item);
+                        context.FoodRecipeItems.RemoveRange(recipeToDelete.FoodRecipeItems); // ✅ Remove linked FoodRecipeItems first
+                        context.FoodRecipes.Remove(recipeToDelete); // ✅ Then remove the recipe
                         await context.SaveChangesAsync();
-                        FoodRecipes.Remove(item);
+
+                        FoodRecipes.Remove(item); // ✅ Remove from UI collection
                     }
                 }
-                catch (Exception ex)
-                {
-                    await Shell.Current.DisplayAlert("Error", $"Failed to delete recipe: {ex.Message}", "OK");
-                }
+            }
+            catch (Exception ex)
+            {
+                await Shell.Current.DisplayAlert("Error", $"Failed to delete recipe: {ex.Message}", "OK");
             }
         }
     }

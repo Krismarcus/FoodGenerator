@@ -20,7 +20,7 @@ namespace FoodGenerator.ViewModels
         private string _searchText;
 
         [ObservableProperty]
-        private double _weight;
+        private double _weight; // ✅ New property to store weight in grams
 
         [ObservableProperty]
         private ObservableCollection<string> _suggestions = new();
@@ -29,48 +29,48 @@ namespace FoodGenerator.ViewModels
         private bool _showSuggestions;
 
         [ObservableProperty]
-        private ObservableCollection<FoodItem> _selectedFoodItems = new();
+        private ObservableCollection<FoodRecipeItem> _selectedFoodRecipeItems = new(); // ✅ Updated from FoodItem
 
         [ObservableProperty]
         private string _recipeName;
 
+        /// <summary>
+        /// Save the new recipe with selected food items and grams
+        /// </summary>
         [RelayCommand]
         private async Task Save()
         {
-            if (string.IsNullOrWhiteSpace(RecipeName) || SelectedFoodItems.Count == 0) return;
+            if (string.IsNullOrWhiteSpace(RecipeName) || SelectedFoodRecipeItems.Count == 0) return;
 
             try
             {
                 var newRecipe = new FoodRecipe
                 {
                     RecipeName = RecipeName,
-                    FoodItems = new List<FoodItem>()
+                    FoodRecipeItems = new List<FoodRecipeItem>()
                 };
 
-                newRecipe.FoodItems.AddRange(SelectedFoodItems);
-                _context.FoodRecipes.Add(newRecipe);
+                foreach (var item in SelectedFoodRecipeItems)
+                {
+                    _context.Attach(item.FoodItem); // ✅ Ensure existing FoodItem is tracked
+                    newRecipe.FoodRecipeItems.Add(item);
+                }
 
+                _context.FoodRecipes.Add(newRecipe);
                 await _context.SaveChangesAsync();
+
                 MessagingCenter.Send(this, "RefreshRecipeList");
                 await Shell.Current.Navigation.PopModalAsync();
             }
-            catch (DbUpdateException dbEx)
-            {
-                Console.WriteLine($"DB Update Error: {dbEx}");
-                if (dbEx.InnerException != null)
-                {
-                    Console.WriteLine($"Inner Exception: {dbEx.InnerException.Message}");
-                }
-
-                await Shell.Current.DisplayAlert("Error", $"Failed to save recipe: {dbEx.InnerException?.Message ?? dbEx.Message}", "OK");
-            }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error saving recipe: {ex}");
                 await Shell.Current.DisplayAlert("Error", $"Failed to save recipe: {ex.Message}", "OK");
             }
         }
 
+        /// <summary>
+        /// Select a food item suggestion
+        /// </summary>
         [RelayCommand]
         private void SelectSuggestion(string suggestion)
         {
@@ -78,23 +78,34 @@ namespace FoodGenerator.ViewModels
             ShowSuggestions = false;
         }
 
+        /// <summary>
+        /// Add a food item with grams to the recipe
+        /// </summary>
         [RelayCommand]
         private void AddFoodItem()
         {
-            if (string.IsNullOrWhiteSpace(SearchText)) return;
+            if (string.IsNullOrWhiteSpace(SearchText) || Weight <= 0) return;
 
             var foodItem = _context.FoodItems.FirstOrDefault(f => f.Name == SearchText);
             if (foodItem != null)
             {
-                SelectedFoodItems.Add(foodItem);
-                SearchText = string.Empty; // Clear the search text
+                // ✅ Create a new FoodRecipeItem with grams
+                var recipeItem = new FoodRecipeItem
+                {
+                    FoodItem = foodItem,
+                    Weight = _weight
+                };
+
+                SelectedFoodRecipeItems.Add(recipeItem);
+                SearchText = string.Empty; // ✅ Clear search text
+                Weight = 0; // ✅ Reset grams input
             }
         }
-
+        
         [RelayCommand]
-        private void RemoveFoodItem(FoodItem item)
+        private void RemoveFoodItem(FoodRecipeItem item)
         {
-            SelectedFoodItems.Remove(item);
+            SelectedFoodRecipeItems.Remove(item);
         }
 
         partial void OnSearchTextChanged(string value)
@@ -109,6 +120,9 @@ namespace FoodGenerator.ViewModels
             }
         }
 
+        /// <summary>
+        /// Load food item suggestions based on search input
+        /// </summary>
         private void LoadSuggestions(string searchText)
         {
             var foodNames = _context.FoodItems

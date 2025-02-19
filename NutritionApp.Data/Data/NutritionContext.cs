@@ -12,7 +12,8 @@ namespace NutritionApp.Data.Data
     {
         public DbSet<FoodItem> FoodItems { get; set; }
         public DbSet<StorageItem> StorageItems { get; set; }
-        public DbSet<FoodRecipe> FoodRecipes { get; set; } // Add this line
+        public DbSet<FoodRecipe> FoodRecipes { get; set; }
+        public DbSet<FoodRecipeItem> FoodRecipeItems { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -50,11 +51,22 @@ namespace NutritionApp.Data.Data
             {
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.RecipeName).IsRequired();
+            });
 
-                // Configure many-to-many relationship with FoodItem
-                entity.HasMany(e => e.FoodItems)
+            // Configure FoodRecipeItem (Join Table with Grams)
+            modelBuilder.Entity<FoodRecipeItem>(entity =>
+            {
+                entity.HasKey(fri => fri.Id); // Primary Key
+
+                entity.HasOne(fri => fri.FoodRecipe)
+                      .WithMany(fr => fr.FoodRecipeItems)
+                      .HasForeignKey(fri => fri.FoodRecipeId)
+                      .OnDelete(DeleteBehavior.Cascade); // If a recipe is deleted, remove its ingredients
+
+                entity.HasOne(fri => fri.FoodItem)
                       .WithMany()
-                      .UsingEntity(j => j.ToTable("FoodRecipeFoodItems"));
+                      .HasForeignKey(fri => fri.FoodItemId)
+                      .OnDelete(DeleteBehavior.Restrict); // Don't delete FoodItem when removing a recipe
             });
         }
     }

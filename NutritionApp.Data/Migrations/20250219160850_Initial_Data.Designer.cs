@@ -11,7 +11,7 @@ using NutritionApp.Data.Data;
 namespace NutritionApp.Data.Migrations
 {
     [DbContext(typeof(NutritionContext))]
-    [Migration("20250219131745_Initial_Data")]
+    [Migration("20250219160850_Initial_Data")]
     partial class Initial_Data
     {
         /// <inheritdoc />
@@ -23,21 +23,6 @@ namespace NutritionApp.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
-
-            modelBuilder.Entity("FoodItemFoodRecipe", b =>
-                {
-                    b.Property<int>("FoodItemsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("FoodRecipeId")
-                        .HasColumnType("int");
-
-                    b.HasKey("FoodItemsId", "FoodRecipeId");
-
-                    b.HasIndex("FoodRecipeId");
-
-                    b.ToTable("FoodRecipeFoodItems", (string)null);
-                });
 
             modelBuilder.Entity("NutritionApp.Data.Models.FoodItem", b =>
                 {
@@ -79,6 +64,32 @@ namespace NutritionApp.Data.Migrations
                     b.ToTable("FoodRecipes");
                 });
 
+            modelBuilder.Entity("NutritionApp.Data.Models.FoodRecipeItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("FoodItemId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FoodRecipeId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("Weight")
+                        .HasColumnType("double");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FoodItemId");
+
+                    b.HasIndex("FoodRecipeId");
+
+                    b.ToTable("FoodRecipeItems");
+                });
+
             modelBuilder.Entity("NutritionApp.Data.Models.StorageItem", b =>
                 {
                     b.Property<int>("Id")
@@ -97,21 +108,6 @@ namespace NutritionApp.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("StorageItems");
-                });
-
-            modelBuilder.Entity("FoodItemFoodRecipe", b =>
-                {
-                    b.HasOne("NutritionApp.Data.Models.FoodItem", null)
-                        .WithMany()
-                        .HasForeignKey("FoodItemsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("NutritionApp.Data.Models.FoodRecipe", null)
-                        .WithMany()
-                        .HasForeignKey("FoodRecipeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("NutritionApp.Data.Models.FoodItem", b =>
@@ -190,6 +186,30 @@ namespace NutritionApp.Data.Migrations
 
                     b.Navigation("Proteins")
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("NutritionApp.Data.Models.FoodRecipeItem", b =>
+                {
+                    b.HasOne("NutritionApp.Data.Models.FoodItem", "FoodItem")
+                        .WithMany()
+                        .HasForeignKey("FoodItemId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("NutritionApp.Data.Models.FoodRecipe", "FoodRecipe")
+                        .WithMany("FoodRecipeItems")
+                        .HasForeignKey("FoodRecipeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("FoodItem");
+
+                    b.Navigation("FoodRecipe");
+                });
+
+            modelBuilder.Entity("NutritionApp.Data.Models.FoodRecipe", b =>
+                {
+                    b.Navigation("FoodRecipeItems");
                 });
 #pragma warning restore 612, 618
         }

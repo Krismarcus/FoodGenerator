@@ -12,9 +12,11 @@ namespace NutritionApp.Data.Models
     {
         public int Id { get; set; }
         public string RecipeName { get; set; }
-        public List<FoodItem> FoodItems { get; set; } = new();
+        public List<FoodRecipeItem> FoodRecipeItems { get; set; } = new();
         [Column(TypeName = "DOUBLE")]
         [DefaultValue(0.0)]
-        public double Calories => FoodItems?.Sum(f => f.Calories) ?? 0;
+        public double Calories => FoodRecipeItems?.Sum(fri =>
+    (fri.FoodItem?.Calories ?? 0) * (fri.Weight) / 100) ?? 0;
+
     }
 }

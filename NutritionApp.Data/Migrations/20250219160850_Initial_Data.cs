@@ -72,23 +72,26 @@ namespace NutritionApp.Data.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "FoodRecipeFoodItems",
+                name: "FoodRecipeItems",
                 columns: table => new
                 {
-                    FoodItemsId = table.Column<int>(type: "int", nullable: false),
-                    FoodRecipeId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    FoodRecipeId = table.Column<int>(type: "int", nullable: false),
+                    FoodItemId = table.Column<int>(type: "int", nullable: false),
+                    Weight = table.Column<double>(type: "double", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_FoodRecipeFoodItems", x => new { x.FoodItemsId, x.FoodRecipeId });
+                    table.PrimaryKey("PK_FoodRecipeItems", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_FoodRecipeFoodItems_FoodItems_FoodItemsId",
-                        column: x => x.FoodItemsId,
+                        name: "FK_FoodRecipeItems_FoodItems_FoodItemId",
+                        column: x => x.FoodItemId,
                         principalTable: "FoodItems",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_FoodRecipeFoodItems_FoodRecipes_FoodRecipeId",
+                        name: "FK_FoodRecipeItems_FoodRecipes_FoodRecipeId",
                         column: x => x.FoodRecipeId,
                         principalTable: "FoodRecipes",
                         principalColumn: "Id",
@@ -97,8 +100,13 @@ namespace NutritionApp.Data.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateIndex(
-                name: "IX_FoodRecipeFoodItems_FoodRecipeId",
-                table: "FoodRecipeFoodItems",
+                name: "IX_FoodRecipeItems_FoodItemId",
+                table: "FoodRecipeItems",
+                column: "FoodItemId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_FoodRecipeItems_FoodRecipeId",
+                table: "FoodRecipeItems",
                 column: "FoodRecipeId");
         }
 
@@ -106,7 +114,7 @@ namespace NutritionApp.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "FoodRecipeFoodItems");
+                name: "FoodRecipeItems");
 
             migrationBuilder.DropTable(
                 name: "StorageItems");
