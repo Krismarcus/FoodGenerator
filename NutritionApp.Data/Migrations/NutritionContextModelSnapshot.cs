@@ -21,6 +21,21 @@ namespace NutritionApp.Data.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
+            modelBuilder.Entity("FoodItemFoodRecipe", b =>
+                {
+                    b.Property<int>("FoodItemsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FoodRecipeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("FoodItemsId", "FoodRecipeId");
+
+                    b.HasIndex("FoodRecipeId");
+
+                    b.ToTable("FoodRecipeFoodItems", (string)null);
+                });
+
             modelBuilder.Entity("NutritionApp.Data.Models.FoodItem", b =>
                 {
                     b.Property<int>("Id")
@@ -44,6 +59,23 @@ namespace NutritionApp.Data.Migrations
                     b.ToTable("FoodItems");
                 });
 
+            modelBuilder.Entity("NutritionApp.Data.Models.FoodRecipe", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("RecipeName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FoodRecipes");
+                });
+
             modelBuilder.Entity("NutritionApp.Data.Models.StorageItem", b =>
                 {
                     b.Property<int>("Id")
@@ -62,6 +94,21 @@ namespace NutritionApp.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("StorageItems");
+                });
+
+            modelBuilder.Entity("FoodItemFoodRecipe", b =>
+                {
+                    b.HasOne("NutritionApp.Data.Models.FoodItem", null)
+                        .WithMany()
+                        .HasForeignKey("FoodItemsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("NutritionApp.Data.Models.FoodRecipe", null)
+                        .WithMany()
+                        .HasForeignKey("FoodRecipeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("NutritionApp.Data.Models.FoodItem", b =>

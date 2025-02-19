@@ -6,6 +6,7 @@
         {
             InitializeComponent();
             Routing.RegisterRoute("StoragePage", typeof(StoragePage));
+            Routing.RegisterRoute("RecipePage", typeof(RecipePage));
         }
     }
 }

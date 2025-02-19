@@ -122,4 +122,25 @@ public partial class MainViewModel : ObservableObject
             await Shell.Current.DisplayAlert("Error", $"Failed to delete food items: {ex.Message}", "OK");
         }
     }
+
+    [RelayCommand]
+    private void Sort(string sortBy)
+    {
+        var sorted = sortBy switch
+        {
+            "Fats" => FoodItems.OrderByDescending(f => f.Fats.Total).ToList(),
+            "Fiber" => FoodItems.OrderByDescending(f => f.Carbohydrates.Fiber).ToList(),
+            "Carbs" => FoodItems.OrderByDescending(f => f.Carbohydrates.Total).ToList(),
+            "Omega3" => FoodItems.OrderByDescending(f => f.Fats.Omega3).ToList(),
+            "Omega6" => FoodItems.OrderByDescending(f => f.Fats.Omega6).ToList(),
+            "Sugars" => FoodItems.OrderByDescending(f => f.Carbohydrates.Sugar).ToList(),
+            _ => FoodItems.ToList()
+        };
+
+        FoodItems.Clear();
+        foreach (var item in sorted)
+        {
+            FoodItems.Add(item);
+        }
+    }
 }

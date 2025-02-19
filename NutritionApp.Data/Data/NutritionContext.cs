@@ -12,6 +12,7 @@ namespace NutritionApp.Data.Data
     {
         public DbSet<FoodItem> FoodItems { get; set; }
         public DbSet<StorageItem> StorageItems { get; set; }
+        public DbSet<FoodRecipe> FoodRecipes { get; set; } // Add this line
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -27,6 +28,7 @@ namespace NutritionApp.Data.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Configure FoodItem
             modelBuilder.Entity<FoodItem>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -36,12 +38,24 @@ namespace NutritionApp.Data.Data
                 entity.OwnsOne(e => e.Carbohydrates);
             });
 
+            // Configure StorageItem
             modelBuilder.Entity<StorageItem>(entity =>
             {
                 entity.HasKey(e => e.Id);
-                entity.Property(e => e.Name).IsRequired();                
+                entity.Property(e => e.Name).IsRequired();
+            });
+
+            // Configure FoodRecipe
+            modelBuilder.Entity<FoodRecipe>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.RecipeName).IsRequired();
+
+                // Configure many-to-many relationship with FoodItem
+                entity.HasMany(e => e.FoodItems)
+                      .WithMany()
+                      .UsingEntity(j => j.ToTable("FoodRecipeFoodItems"));
             });
         }
-
     }
 }

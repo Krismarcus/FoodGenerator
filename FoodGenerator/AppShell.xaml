@@ -16,6 +16,10 @@
              Icon="storage_icon.png">
             <ShellContent ContentTemplate="{DataTemplate local:StoragePage}" />
         </Tab>
+        <Tab Title="Recipes"
+             Icon="recipes_icon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:RecipePage}" />
+        </Tab>
     </TabBar>
 
 </Shell>

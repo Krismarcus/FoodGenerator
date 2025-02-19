@@ -12,14 +12,53 @@
     </ContentPage.BindingContext>
 
     <ContentPage.Resources>
-        <ResourceDictionary>            
-            <converters:MacronutrientToAnimatedBrushConverter x:Key="AnimatedMacronutrientConverter"/>            
+        <ResourceDictionary>
+            <converters:MacronutrientToAnimatedBrushConverter x:Key="AnimatedMacronutrientConverter"/>
+            <Style x:Key="SortButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="TextColor" Value="#444444"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="Padding" Value="8"/>
+                <Setter Property="CornerRadius" Value="20"/>
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <Grid RowDefinitions="*,Auto" RowSpacing="0">
+    <Grid RowDefinitions="Auto,*,Auto" RowSpacing="0">
+        <!-- Sorting Buttons Row -->
+        <ScrollView Grid.Row="0" 
+                    Orientation="Horizontal"
+                    HorizontalScrollBarVisibility="Never"
+                    Padding="10,5">
+            <HorizontalStackLayout Spacing="10">
+                <Button Text="🥑 Fats" 
+                       Command="{Binding SortCommand}" 
+                       CommandParameter="Fats"
+                       Style="{StaticResource SortButtonStyle}"/>
+                <Button Text="🥦 Fiber" 
+                       Command="{Binding SortCommand}" 
+                       CommandParameter="Fiber"
+                       Style="{StaticResource SortButtonStyle}"/>
+                <Button Text="🍞 Carbs" 
+                       Command="{Binding SortCommand}" 
+                       CommandParameter="Carbs"
+                       Style="{StaticResource SortButtonStyle}"/>
+                <Button Text="🐟 Omega3" 
+                       Command="{Binding SortCommand}" 
+                       CommandParameter="Omega3"
+                       Style="{StaticResource SortButtonStyle}"/>
+                <Button Text="🌻 Omega6" 
+                       Command="{Binding SortCommand}" 
+                       CommandParameter="Omega6"
+                       Style="{StaticResource SortButtonStyle}"/>
+                <Button Text="🍭 Sugars" 
+                       Command="{Binding SortCommand}" 
+                       CommandParameter="Sugars"
+                       Style="{StaticResource SortButtonStyle}"/>
+            </HorizontalStackLayout>
+        </ScrollView>
         <!-- Food Items Collection -->
-        <CollectionView Grid.Row="0"
+        <CollectionView Grid.Row="1"
                         ItemsSource="{Binding FoodItems}"
                         Margin="10"
                         SelectionMode="None">
@@ -163,7 +202,7 @@
         </CollectionView>
 
         <!-- Add Button -->
-        <Grid Grid.Row="1" ColumnDefinitions="*,*" Margin="20">
+        <Grid Grid.Row="2" ColumnDefinitions="*,*" Margin="20">
             <!-- Storage Button -->
             <Button Grid.Column="0"
             Text="📦 Storage"

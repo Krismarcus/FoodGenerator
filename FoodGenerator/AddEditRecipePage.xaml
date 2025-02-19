@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:FoodGenerator.ViewModels"
+             x:Class="FoodGenerator.AddEditRecipePage"
+             Title="AddEditRecipePage">
+    <ContentPage.BindingContext>
+        <viewmodel:AddEditRecipeViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="20" Spacing="20">
+        <!-- Recipe Name Input -->
+        <VerticalStackLayout Spacing="5">
+            <Label Text="Recipe Name"/>
+            <Entry Text="{Binding RecipeName}" 
+                   Placeholder="Enter recipe name"/>
+        </VerticalStackLayout>
+
+        <!-- Food Item Search and Suggestions -->
+        <VerticalStackLayout Spacing="5">
+            <Label Text="Search Food Items"/>
+            <Entry Text="{Binding SearchText}" 
+                   Placeholder="Start typing..."/>
+
+            <CollectionView ItemsSource="{Binding Suggestions}" 
+                           IsVisible="{Binding ShowSuggestions}"
+                           HeightRequest="150">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10" BackgroundColor="White">
+                            <Label Text="{Binding .}" 
+                                 FontSize="16">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:AddEditRecipeViewModel}}, Path=SelectSuggestionCommand}"
+                                        CommandParameter="{Binding .}"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Button Text="Add Food Item" 
+                    Command="{Binding AddFoodItemCommand}"
+                    BackgroundColor="#6C5CE7" TextColor="White"/>
+        </VerticalStackLayout>
+
+        <!-- Selected Food Items List -->
+        <VerticalStackLayout Spacing="5">
+            <Label Text="Selected Food Items"/>
+            <CollectionView ItemsSource="{Binding SelectedFoodItems}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10" BackgroundColor="White">
+                            <Label Text="{Binding Name}" 
+                                 FontSize="16"/>
+                            <Button Text="Remove" 
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:AddEditRecipeViewModel}}, Path=RemoveFoodItemCommand}"
+                                    CommandParameter="{Binding .}"
+                                    HorizontalOptions="End"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+
+        <!-- Save Button -->
+        <Button Text="Save Recipe" 
+                Command="{Binding SaveCommand}"
+                BackgroundColor="#6C5CE7" TextColor="White"/>
+    </StackLayout>
+</ContentPage>

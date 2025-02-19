@@ -41,6 +41,21 @@ namespace NutritionApp.Data.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "FoodRecipes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    RecipeName = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_FoodRecipes", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "StorageItems",
                 columns: table => new
                 {
@@ -55,16 +70,52 @@ namespace NutritionApp.Data.Migrations
                     table.PrimaryKey("PK_StorageItems", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "FoodRecipeFoodItems",
+                columns: table => new
+                {
+                    FoodItemsId = table.Column<int>(type: "int", nullable: false),
+                    FoodRecipeId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_FoodRecipeFoodItems", x => new { x.FoodItemsId, x.FoodRecipeId });
+                    table.ForeignKey(
+                        name: "FK_FoodRecipeFoodItems_FoodItems_FoodItemsId",
+                        column: x => x.FoodItemsId,
+                        principalTable: "FoodItems",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_FoodRecipeFoodItems_FoodRecipes_FoodRecipeId",
+                        column: x => x.FoodRecipeId,
+                        principalTable: "FoodRecipes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_FoodRecipeFoodItems_FoodRecipeId",
+                table: "FoodRecipeFoodItems",
+                column: "FoodRecipeId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "FoodItems");
+                name: "FoodRecipeFoodItems");
 
             migrationBuilder.DropTable(
                 name: "StorageItems");
+
+            migrationBuilder.DropTable(
+                name: "FoodItems");
+
+            migrationBuilder.DropTable(
+                name: "FoodRecipes");
         }
     }
 }
