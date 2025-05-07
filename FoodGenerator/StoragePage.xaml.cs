@@ -15,6 +15,11 @@ public partial class StoragePage : ContentPage
         await Navigation.PushModalAsync(new AddEditStoragePage());
     }
 
+    private async void OnAvailableRecipesClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new AvailableRecipesPage());
+    }
+
     protected override void OnAppearing()
     {
         base.OnAppearing();

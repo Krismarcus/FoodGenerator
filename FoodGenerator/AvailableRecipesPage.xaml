@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:FoodGenerator.ViewModels"
+             x:Class="FoodGenerator.AvailableRecipesPage"
+             Title="Available Recipes">
+    <ContentPage.BindingContext>
+        <viewmodel:AvailableRecipesViewModel />
+    </ContentPage.BindingContext>
+
+    <CollectionView ItemsSource="{Binding AvailableRecipes}">
+        <CollectionView.ItemsLayout>
+            <GridItemsLayout Orientation="Vertical" Span="2" 
+                           VerticalItemSpacing="10" HorizontalItemSpacing="10"/>
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame Padding="0" CornerRadius="24" HasShadow="True" 
+                     BackgroundColor="White" HeightRequest="100">
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Text="{Binding RecipeName}" 
+                             FontSize="16" FontAttributes="Bold"
+                             TextColor="Black"
+                             HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                        <Label Grid.Row="1" 
+                             Text="{Binding Calories, StringFormat='{0}cal'}"
+                             FontSize="14" 
+                             HorizontalOptions="Center"
+                             TextColor="Gray"/>
+                    </Grid>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
