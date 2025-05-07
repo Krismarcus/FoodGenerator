@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 
 namespace NutritionApp.Data.Models
 {
-    public partial class StorageItem : ObservableObject
+    public partial class MissingFoodItem : ObservableObject
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public string ItemName { get; set; }
+        public double Required { get; set; }
+        public double Available { get; set; }
+        
         [ObservableProperty]
-        public double weight;
+        public string _amountToAdd;
     }
 }

@@ -11,8 +11,8 @@ using NutritionApp.Data.Data;
 namespace NutritionApp.Data.Migrations
 {
     [DbContext(typeof(NutritionContext))]
-    [Migration("20250219160850_Initial_Data")]
-    partial class Initial_Data
+    [Migration("20250507123952_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -28,7 +28,7 @@ namespace FoodGenerator.ViewModels
         {
             var items = _context.StorageItems.ToList();
             StorageItems.Clear();
-            foreach (var item in items)
+            foreach (StorageItem item in items)
             {
                 StorageItems.Add(item);
             }
