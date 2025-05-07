@@ -4,102 +4,106 @@
              xmlns:viewmodel="clr-namespace:FoodGenerator.ViewModels"
              x:Class="FoodGenerator.AddEditRecipePage"
              Title="AddEditRecipePage">
-    <ContentPage.BindingContext>
-        <viewmodel:AddEditRecipeViewModel />
-    </ContentPage.BindingContext>
+<Grid RowDefinitions="*,Auto"> <!-- Use Grid to separate scrollable content and fixed button -->
+        <!-- Scrollable Content -->
+        <ScrollView Grid.Row="0"> <!-- ScrollView for the main content -->
+            <StackLayout Padding="20" Spacing="20">
 
-    <StackLayout Padding="20" Spacing="20">
+                <!-- Recipe Name Input -->
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Recipe Name"/>
+                    <Entry Text="{Binding RecipeName}" 
+                           Placeholder="Enter recipe name"/>
+                </VerticalStackLayout>
 
-        <!-- Recipe Name Input -->
-        <VerticalStackLayout Spacing="5">
-            <Label Text="Recipe Name"/>
-            <Entry Text="{Binding RecipeName}" 
-                   Placeholder="Enter recipe name"/>
-        </VerticalStackLayout>
+                <!-- Food Item Search and Selection -->
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Search Food Items"/>
+                    <Entry Text="{Binding SearchText}" 
+                           Placeholder="Start typing..." />
 
-        <!-- Food Item Search and Selection -->
-        <VerticalStackLayout Spacing="5">
-            <Label Text="Search Food Items"/>
-            <Entry Text="{Binding SearchText}" 
-                   Placeholder="Start typing..." />
+                    <!-- Suggestions List -->
+                    <CollectionView ItemsSource="{Binding Suggestions}" 
+                                    IsVisible="{Binding ShowSuggestions}"
+                                    HeightRequest="150">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Padding="10" BackgroundColor="White">
+                                    <Label Text="{Binding .}" FontSize="16">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer 
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:AddEditRecipeViewModel}}, Path=SelectSuggestionCommand}"
+                                                CommandParameter="{Binding .}"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
 
-            <!-- Suggestions List -->
-            <CollectionView ItemsSource="{Binding Suggestions}" 
-                            IsVisible="{Binding ShowSuggestions}"
-                            HeightRequest="150">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid Padding="10" BackgroundColor="White">
-                            <Label Text="{Binding .}" FontSize="16">
-                                <Label.GestureRecognizers>
-                                    <TapGestureRecognizer 
-                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:AddEditRecipeViewModel}}, Path=SelectSuggestionCommand}"
-                                    CommandParameter="{Binding .}"/>
-                                </Label.GestureRecognizers>
-                            </Label>
-                        </Grid>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </VerticalStackLayout>
+                <!-- Weight Input -->
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Weight (grams)"/>
+                    <Entry Text="{Binding Weight, Mode=TwoWay}" Placeholder="Enter weight in grams" Keyboard="Numeric"/>
+                </VerticalStackLayout>
 
-        <!-- Weight Input -->
-        <VerticalStackLayout Spacing="5">
-            <Label Text="Weight (grams)"/>
-            <Entry Text="{Binding Weight, Mode=TwoWay}" Placeholder="Enter weight in grams" Keyboard="Numeric"/>
-        </VerticalStackLayout>
+                <!-- Add Food Item Button -->
+                <Button Text="Add Food Item" 
+                        Command="{Binding AddFoodItemCommand}"
+                        BackgroundColor="#6C5CE7" TextColor="White"/>
 
-        <!-- Add Food Item Button -->
-        <Button Text="Add Food Item" 
-                Command="{Binding AddFoodItemCommand}"
-                BackgroundColor="#6C5CE7" TextColor="White"/>
+                <!-- Selected Food Items with Grams -->
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Selected Food Items"/>
 
-        <!-- Selected Food Items with Grams -->
-        <VerticalStackLayout Spacing="5">
-            <Label Text="Selected Food Items"/>
+                    <!-- Scrollable CollectionView for Selected Food Items -->
+                    <CollectionView ItemsSource="{Binding SelectedFoodRecipeItems}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Padding="10" BackgroundColor="White">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="80"/>
+                                        <ColumnDefinition Width="50"/>
+                                    </Grid.ColumnDefinitions>
 
-            <CollectionView ItemsSource="{Binding SelectedFoodRecipeItems}">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid Padding="10" BackgroundColor="White">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="80"/>
-                                <ColumnDefinition Width="50"/>
-                            </Grid.ColumnDefinitions>
+                                    <!-- Food Item Name -->
+                                    <Label Text="{Binding FoodItem.Name}" FontSize="16" Grid.Column="0"/>
 
-                            <!-- Food Item Name -->
-                            <Label Text="{Binding FoodItem.Name}" FontSize="16" Grid.Column="0"/>
+                                    <!-- Grams Input -->
+                                    <Entry Text="{Binding Weight, Mode=TwoWay}" 
+                                           Placeholder="Grams" 
+                                           Keyboard="Numeric" 
+                                           Grid.Column="1"/>
 
-                            <!-- Grams Input -->
-                            <Entry Text="{Binding Grams, Mode=TwoWay}" 
-                                   Placeholder="Grams" 
-                                   Keyboard="Numeric" 
-                                   Grid.Column="1"/>
+                                    <!-- Remove Button -->
+                                    <Button Text="❌" 
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:AddEditRecipeViewModel}}, Path=RemoveFoodItemCommand}"
+                                            CommandParameter="{Binding .}" 
+                                            Grid.Column="2"/>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
 
-                            <!-- Remove Button -->
-                            <Button Text="❌" 
-                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:AddEditRecipeViewModel}}, Path=RemoveFoodItemCommand}"
-                                    CommandParameter="{Binding .}" 
-                                    Grid.Column="2"/>
-                        </Grid>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </VerticalStackLayout>
+                <!-- Nutrition Summary -->
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Total Nutrition"/>
+                    <Label Text="{Binding Calories, StringFormat='Calories: {0:F1} kcal'}"/>
+                    <Label Text="{Binding TotalFats, StringFormat='Fats: {0:F1}g'}"/>
+                    <Label Text="{Binding TotalProteins, StringFormat='Proteins: {0:F1}g'}"/>
+                    <Label Text="{Binding TotalCarbohydrates, StringFormat='Carbs: {0:F1}g'}"/>
+                </VerticalStackLayout>
+            </StackLayout>
+        </ScrollView>
 
-        <!-- Nutrition Summary -->
-        <VerticalStackLayout Spacing="5">
-            <Label Text="Total Nutrition"/>
-            <Label Text="{Binding TotalCalories, StringFormat='Calories: {0:F1} kcal'}"/>
-            <Label Text="{Binding TotalFats, StringFormat='Fats: {0:F1}g'}"/>
-            <Label Text="{Binding TotalProteins, StringFormat='Proteins: {0:F1}g'}"/>
-            <Label Text="{Binding TotalCarbohydrates, StringFormat='Carbs: {0:F1}g'}"/>
-        </VerticalStackLayout>
-
-        <!-- Save Button -->
-        <Button Text="Save Recipe" 
+        <!-- Fixed Save Button at the Bottom -->
+        <Button Grid.Row="1" 
+                Text="Save Recipe" 
                 Command="{Binding SaveCommand}"
-                BackgroundColor="#6C5CE7" TextColor="White"/>
-    </StackLayout>
+                BackgroundColor="#6C5CE7" TextColor="White"
+                Margin="20"/>
+    </Grid>
 </ContentPage>

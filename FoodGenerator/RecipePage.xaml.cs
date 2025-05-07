@@ -15,13 +15,13 @@ public partial class RecipePage : ContentPage
         await Navigation.PushModalAsync(new AddEditRecipePage());
     }
 
-    protected override async void OnAppearing() // Change to async void
+    protected override async void OnAppearing()
     {
         base.OnAppearing();
 
         if (BindingContext is RecipesViewModel viewModel)
         {
-            await viewModel.LoadRecipesItemsAsync(); // Properly await the async method
+            await viewModel.LoadRecipesItemsAsync();
         }
     }
 }

@@ -19,17 +19,21 @@ namespace FoodGenerator.ViewModels
 
         public RecipesViewModel()
         {
-            
+            MessagingCenter.Subscribe<AddEditRecipeViewModel>(this, "RefreshRecipeList", async (sender) =>
+            {
+                await LoadRecipesItemsAsync();
+            });
         }
 
         public async Task LoadRecipesItemsAsync()
         {
             try
             {
-                using (var context = new NutritionContext()) // Create a new context
+                using (var context = new NutritionContext())
                 {
                     var items = await context.FoodRecipes
-                                             .Include(r => r.FoodRecipeItems)
+                                             .Include(r => r.FoodRecipeItems) // Load FoodRecipeItems
+                                             .ThenInclude(fri => fri.FoodItem) // Load FoodItem for each FoodRecipeItem
                                              .ToListAsync()
                                              .ConfigureAwait(false);
 
@@ -40,6 +44,15 @@ namespace FoodGenerator.ViewModels
             {
                 await Shell.Current.DisplayAlert("Error", $"Failed to load recipes: {ex.Message}", "OK");
             }
+        }
+
+        [RelayCommand]
+        private async Task EditRecipe(FoodRecipe recipe)
+        {
+            if (recipe == null) return;
+
+            // Navigate to the AddEditRecipePage with the selected recipe as a parameter
+            await Shell.Current.Navigation.PushModalAsync(new AddEditRecipePage(recipe));
         }
 
         [RelayCommand]
